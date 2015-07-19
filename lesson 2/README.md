@@ -8,23 +8,24 @@
 
 ##HTML5 标签
 
-- 标准可查：<a href="http://html5doctor.com/">html5 doctor</a>
+- 标准可查：<a href="http://html5doctor.com/" target="_blank">html5 doctor</a>
+- 中文版：<a href="http://www.w3school.com.cn/tags/tag_doctype.asp" target="_blank">w3School</a>
 
 ### 常用标签
 
 #### Head
-- doctype 
-- html
+- doctype  只用记html5标准
+- html 
 - head
 - title
-- link
-- meta 
+- link 外联样式
+- meta
 	- name="description"
 	- name="keywords"
 	- http-equiv="content-type" content="text/html;charset=utf-8"
 	- http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
-- style
-- script
+- style 内联样式
+- script 内联或外联javascript
 
 #### Sections
 
@@ -33,14 +34,14 @@
 
 #### Grouping
 
-- p
-- ol
-- ul
+- p  段落
+- ol 有序列表
+- ul 无序列表
 - li
-- dl, dt, dd
-- div
+- dl, dt, dd 列表, 列表的头 ,列表的内容
+- div 分块
 
-#### Tables
+#### Tables 表格
 
 - table
 - thead
@@ -50,33 +51,35 @@
 - th
 - td
 
-#### Forms
+#### Forms 表单
 
 - form
-- label
-- input
-- button
-- select
+- label 标注
+- input 输入
+- button 按钮
+- select 单选或多选菜单
 - option
-- textarea
+- textarea 多行输入框
 
 #### Embedded
 
-- img
-- iframe
-- embed
+- img 图片
+- iframe 
+- embed flash使用
 - object
 - param
-- video
-- audio
-- source
-- canvas
+- video 视频
+- audio 音乐
+- source 
+- canvas 画布
 
 #### Text
 
-- a
-- em
-- strong
+- a 链接
+- em 
+- strong 加强
+- span 分行
+- br 换行
 
 ### 语义增强
 
@@ -158,9 +161,15 @@
 - bdi
 - bdo
 - ruby, rt, rp
-- span
-- br
 - wbr
+
+## 元素的分类
+- 块级元素
+	- div
+- 行内元素
+	- span
+- 块级行内元素
+	- img
 
 ## SEO 重点
 
