@@ -2,12 +2,10 @@
 
 ##前端工程师的大环境
 
-- 程序员的工作环境是为数不多的不用拼爹的行业
-- 前端工程师是一个大学不会培养的专业方向
-- 易上手 难精通
-- 因为现在优秀的前端工程师求大于供，所以工资还不错
-- 微信的公众平台带来第二春
-<a href="http://blog.jobbole.com/76416/" target="_blank">工资平均数</a>，大型互联网网高级工程师大概是平均数的2、3倍
+- 程序员，不拼爹
+- 前端少，需求大
+- 易上手，难精通
+- 工资高 <a href="http://www.lagou.com/jobs/list_%E5%89%8D%E7%AB%AF?labelWords=&fromSearch=true&suginput=" target="_blank">拉钩招聘</a>
 
 ##开发需要的环境
 
@@ -16,9 +14,9 @@
 - 网络请求
 - 资源查看
 - 控制台
-- 高级进阶：资源占用
+- 高级进阶：内存资源占用
 
-###开发工具 <a href="http://www.sublimetext.com/3" target="_blank">sublime text</a>
+###开发工具 <a href="http://www.sublimetext.com/3" target="_blank">sublime text3</a>
 
 ####安装插件
 
@@ -53,7 +51,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 - html
 - css
 - javascript
-- 常用库
+- 常用库 jquery、requireJs、bootstrap
 - http协议
 
 ###扩展知识
@@ -72,3 +70,4 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 - <a href="http://www.w3school.com.cn/html5/index.asp" target="_blank">基础知识字典 w3cschool</a>
 - <a href="http://www.github.com" target="_blank">大型同性成人交友社区 github</a>
 - 优秀的社区 <a href="http://www.w3cplus.com/" target="_blank">w3cplus</a> <a href="http://html-js.com/" target="_blank">前端乱炖</a>
+- 优秀的个人博客 <a href="https://www.imququ.com" target="_blank">Jerry Qu</a>  <a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭</a>
