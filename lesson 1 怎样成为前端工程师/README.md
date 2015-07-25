@@ -16,7 +16,7 @@
 - 控制台
 - 高级进阶：内存资源占用
 
-###开发工具 <a href="http://www.sublimetext.com/3" target="_blank">sublime text3</a>
+###开发工具 <a href="http://www.pc6.com/softview/SoftView_59221.html">安装好插件版sublime text3</a> <a href="http://www.sublimetext.com/3" target="_blank">sublime text3</a>
 
 ####安装插件
 
