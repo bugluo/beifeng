@@ -25,7 +25,7 @@
 		-rotate 2d旋转
 		-rotate3d 3d旋转
 		-skew 变换
-		-perspective
+		-perspective 视角
 
 ##动画
 	-@keyframes

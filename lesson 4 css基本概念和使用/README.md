@@ -73,6 +73,8 @@ a{
 ## css重置
 - css reset
     -去掉css的默认属性
-- <a href="https://github.com/necolas/normalize.css">Normalize</a>
+- <a href="https://github.com/necolas/normalize.css" target="_blank">Normalize</a>
     -保护有用的浏览器默认样式而不是完全去掉它们
+- <a href="http://segmentfault.com/a/1190000003021766" target="_blank">reset和Normalize的详细解释</a> <a href="http://segmentfault.com/a/1190000003025718" target="_blank">reset和Normalize的详细解释</a>
+
 
