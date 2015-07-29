@@ -57,16 +57,24 @@ a{
     - span a
 - 块级行内元素
     - img
+- table元素
 
-- 基本规则：块级可以包含行内，行内不要包含块级
+- 基本规则1：块级可以包含行内，行内不要包含块级
     - 经典特例
 ```css
 <a href="javascript:;"><h1>我是标题</h1></a>
+```
+- 基本规则2：块级可以包含块级，行内可以包含行内
+    - 经典特例
+```css
+<p>我是p<p>我是p</p></p>
 ```
 
 ## css重置
 - css reset
     -去掉css的默认属性
-- <a href="https://github.com/necolas/normalize.css">Normalize</a>
+- <a href="https://github.com/necolas/normalize.css" target="_blank">Normalize</a>
     -保护有用的浏览器默认样式而不是完全去掉它们
+- <a href="http://segmentfault.com/a/1190000003021766" target="_blank">reset和Normalize的详细解释</a> <a href="http://segmentfault.com/a/1190000003025718" target="_blank">reset和Normalize的详细解释</a>
+
 
