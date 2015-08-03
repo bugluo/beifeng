@@ -5,8 +5,8 @@
 #### Head
 
 - base
-    -<base href="http://www.w3school.com.cn/i/" />
-    -<base target="_blank" />
+    -href="http://www.w3school.com.cn/i/
+    -target="_blank"
 - noscript
     
 #### Sections
@@ -55,33 +55,23 @@
 -del   删除线
 -ins   新插入的部分
 
-#### Embedded
-
-- track
-- map
-- area
-
 #### Text
 
-- i, b
-- u
-- s
-- small
-- abbr
-- q
-- cite
-- dfn
-- sub, sup
-- time
-- code
-- kbd
-- samp
-- var
-- mark
-- bdi
-- bdo
-- ruby, rt, rp
-- wbr
+- small   缩小文字
+- abbr   简称和缩写
+- q    标签用于简短的行内引用
+- cite   定义引用
+- dfn   定义项目
+- sub, sup   上标和下标
+- time   时间
+- code   计算机代码文本
+- kbd   键盘文本
+- samp   定义样本文本
+- var   定义变量
+- mark   带记号的标识
+- bdi   脱离 bdo的控制
+- bdo   bdo dir="rtl" 改变文本方向
+- wbr   换行时机标签
 
 ## SEO 重点
 
