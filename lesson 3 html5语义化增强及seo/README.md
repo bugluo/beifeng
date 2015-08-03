@@ -11,7 +11,7 @@
     
 #### Sections
 
-- article   独立的自包含内容
+- article   独立的自包含内容   <a href="http://www.yiiyaa.net/?p=1457" target="_blank">article和section区别</a>
 - nav   导航
 - aside   文章侧栏
 - section   章节
