@@ -1,22 +1,24 @@
-#css3 样式增强
-
+# css3 样式增强
 	- <a href="http://isux.tencent.com/css3/index.html" target="_blank">很好用的css3动画速查</a>
 
-##媒体查询(Media Queries)
+## 媒体查询(Media Queries)
 	-响应式布局
     
-##布局增强
+## 布局增强
     -flex布局
+    -table布局
     -translate偏移用于布局
 
-##过渡
+## 伪元素 :before and :after
+
+## 过渡
 	-transition
 		-transition-property 设置过渡效果的 CSS 属性的名称。
 		-transition-duration 完成过渡效果需要多少秒或毫秒。
 		-transition-timing-function 速度效果的速度曲线。
 		-transition-delay 定义过渡效果何时开始。
 
-##变换
+## 变换
 	-transform：
 		-translate  移动
 		-translate3d 3d移动
@@ -27,7 +29,9 @@
 		-skew 变换
 		-perspective 视角
 
-##动画
+## 过渡 + 样式的改变 = 动画效果
+
+## 动画
 	-@keyframes
 		-from to
 		-百分比
