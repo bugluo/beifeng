@@ -5,126 +5,69 @@ ul{
 	list-style-type:none;
 }
 body{
-    background: url(../img/background.png);
-    font-family: "微软雅黑";
+	background:url(../img/background.jpg);
 }
 .wrapper{
-    width:1265px;
+	width:1296px;
 	margin:0 auto;
-	position:relative;
-}
-.wrapperr{
-	margin-top: 120px;
-	background: url(../img/interval.png);
 }
 .header{
-	height:687px;
 	background: url(../img/header.png);
+	height:687px;
 }
-.content{
-	min-height: 200px;
-	width:1265px;
-	margin-top: -120px;
+.main{
+	background: url(../img/interval.png);
+	height:400px;
+	margin-top:-240px;
+}
+.footer-image{
+	background:url(../img/footer.png);
+	height:133px;
 }
 .footer{
-	width:1265px;
-	overflow: hidden;
-	height:178px;
-	background: url(../img/footer.png) no-repeat;
-}
-.left{
-	width:245px;
-	float:left;
-	margin:-250px 90px 0 190px;
-}
-.right{
-	width:600px;
-	float:left;
-	margin-top:-250px;
-}
-.clear{
-	clear: both;
-	height: 0;
-	font-size: 0;
-	overflow: hidden;
-}
-h2{
-	color:#3ba617;
-	line-height: 32px;
-	font-size: 18px;
-	border-bottom: #7ac648 2px solid;
-}
-.footer p{
-	font-family: 'Tahoma';
 	text-align: center;
+	margin:50px 0 70px 0;
+	color:black;
 	font-size: 12px;
 	opacity: 0.5;
+	line-height: 20px;
 }
-.right ul li{
-	text-align: center;
-	width:120px;
-	float:left;
+.h1{
+	opacity: 0;
 }
-.left .bold{
-	font-weight: bold;
-	font-size: 12px;
-	color:#333;
-}
-.left p{
-	color:#777;
-	font-size: 12px;
-	margin:20px 0 10px 0;
-}
-.left p a{
-	text-decoration: none;
-	color:#367cfb;
-}
-.left input{
-	font-size: 12px;
-	width:240px;
-	height:50px;
-	font-family: Arial;
-	text-align: center;
-	color:#777;
-	line-height: 50px;
-	*margin-left:-190px;
-}
-.left>a{
-	background: url(../img/copy.png);
-	width:90px;
-	height:30px;
-	display: block;
-	margin-top:10px;
-}
-.footer div{
-	margin-top:100px;
-}
-.right ul{
-	margin:22px 0 110px -30px;
-}
-.right ul li a{
-	text-decoration: none;
+.tips{
+	color:#3b4c32;
 	font-size: 14px;
-	line-height: 29px;
-	color:#333;
+	margin:277px 0 0 178px;
 }
-.right ul li a:hover{
-    color:red;
-}
-#share{
-	display: block;
-	width:90px;
-	height:30px;
-	position: absolute;
-	top:322px;
-	left:500px;
-}
-.header span{
+.tips span{
 	color:#ffa11a;
 	font-size: 20px;
-	font-family: "Arial";
-	position: absolute;
-	top: 325px;
-	left: 319px;
-	background: white;
+}
+.share{
+    vertical-align: middle;
+	display: inline-block;
+	width:90px;
+	height:30px;
+	text-indent: -9999em;
+	background: url(../img/share.png);
+}
+.copy{
+	vertical-align: middle;
+	display: block;
+	width:90px;
+	height:30px;
+	text-indent: -9999em;
+	background: url(../img/copy.png);
+}
+.aside{
+	float:left;
+	width:335px;
+	margin-left:200px;
+}
+.section{
+	float:left;
+}
+.list li{
+	float:left;
 }
