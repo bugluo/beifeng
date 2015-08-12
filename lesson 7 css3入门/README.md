@@ -1,12 +1,23 @@
 # css3 样式增强
-	- <a href="http://isux.tencent.com/css3/index.html" target="_blank">很好用的css3动画速查</a>
+	-<a href="http://isux.tencent.com/css3/index.html" target="_blank">很好用的css3动画速查</a>
 
 ## 媒体查询(Media Queries)
 	-响应式布局
+
+```css
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="small.css" />
+<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="iphone5.css" />
+<style type="text/css">
+@media screen and (min-width: 600px) {
+	a{display:none;}
+}
+
+</style>
+
+```
     
-## 布局增强
+## 布局增强 （居中和分栏的使用）
     -flex布局
-    -table布局
     -translate偏移用于布局
 
 ## 伪元素 :before and :after
