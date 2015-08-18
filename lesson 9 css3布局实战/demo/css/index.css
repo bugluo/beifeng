@@ -54,14 +54,12 @@ body{
    border-top:1px solid #dfdfdf;
    -webkit-transform-origin:0 0;
 }
-
 @media (-webkit-min-device-pixel-ratio:2){
 	.after-scale:after,.after-scale:before{
 		-webkit-transform:scaleY(.5);
 	}
    
 }
-
 .after-scale{
    position: relative;
 }
