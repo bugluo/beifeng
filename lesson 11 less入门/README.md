@@ -1,20 +1,29 @@
 # less (scss、Stylus)是什么
-	- CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性，无需考虑浏览器的兼容性问题，例如你可以在 CSS 中使用变量、简单的程序逻辑、函数等等在编程语言中的一些基本技巧。
+	
+- CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性，无需考虑浏览器的兼容性问题，例如你可以在 CSS 中使用变量、简单的程序逻辑、函数等等在编程语言中的一些基本技巧。
 
 # 我们为什么要使用less
-	- 可以让你的 CSS 更见简洁，适应性更强，代码更直观。
+  - 因为生命苦短。
+	- 可以让css更具备可维护性。
 
 #怎么开始用
 ##装环境
-	- 安装<a href="https://nodejs.org/">nodejs</a>  
+
+	- 安装<a href="https://nodejs.org/" target="_blank">nodejs</a>
+  - 设置安装淘宝的cnpm
+  - npm config delete http-proxy
+  - npm config delete https-proxy
+  - npm install -g cnpm --registry=https://registry.npm.taobao.org  如果是mac需要在前面加(sudo)开启系统权限
 	- 安装less
-		-npm install -g less
+		-cnpm install -g less
 	- 安装gulp
-    -npm install -g gulp
+    -cnpm install -g gulp
 
 ##使用编译环境
+
 - 使用less编译
 - 用gulp监听less的变化
+
 ```json
 
 ```
