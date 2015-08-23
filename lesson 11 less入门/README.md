@@ -3,13 +3,15 @@
 - CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性，无需考虑浏览器的兼容性问题，例如你可以在 CSS 中使用变量、简单的程序逻辑、函数等等在编程语言中的一些基本技巧。
 
 # 我们为什么要使用less
+
   - 因为生命苦短。
 	- 可以让css更具备可维护性。
 
 #怎么开始用
 ##装环境
 
-	- 安装<a href="https://nodejs.org/" target="_blank">nodejs</a>
+	- 安装 <a href="https://nodejs.org/" target="_blank">nodejs</a>
+  - 了解一下包管理工具 npm
   - 设置安装淘宝的cnpm
   - npm config delete http-proxy
   - npm config delete https-proxy
@@ -25,14 +27,37 @@
 - 用gulp监听less的变化
 
 ```json
-
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bugluo",
+  "license": "MIT",
+  "devDependencies":{
+    "gulp-less":"^v3.0.3"
+  }
+}
 ```
 
-```less 
+```javascript 
+var gulp = require('gulp');
+var less = require('gulp-less');
+
+
 gulp.task('less', function() {
-    gulp.src('./less/**.*')
+    gulp.src('./less/**/*')
         .pipe(less())
         .pipe(gulp.dest('./css'));
+});
+
+gulp.task('default', function () {
+    gulp.watch('./less/**/*',function(){
+      gulp.run('less');
+    });
 });
 ```
 
