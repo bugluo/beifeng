@@ -1,0 +1,142 @@
+*{
+	margin:0;
+	padding:0;
+}
+.nav{
+	position: fixed;
+	bottom: 30%;
+	left:50%;
+	margin-left:-250px;
+	z-index: 10;
+}
+.nav li{
+	float:left;
+	margin:0 20px;
+}
+.nav a{
+	display: block;
+}
+.nav a:before{
+	content:'';
+	display: block;
+	width:80px;
+	height:80px;
+	border:5px solid white;
+	border-radius: 50%;
+}
+.bg{
+	position: fixed;
+	top:0;
+	z-index: 2;
+	width:100%;
+}
+@-webkit-keyframes plana{
+	0%{
+		top:-100%;
+	}
+	100%{
+		top:0;
+	}
+}
+@keyframes plana{
+	0%{
+		top:-100%;
+	}
+	100%{
+		top:0;
+	}
+}
+
+@-webkit-keyframes planb{
+	0%{
+		transform: translate3d(-100%,0,0);
+	}
+	100%{
+		transform: translate3d(0,0,0);
+	}
+}
+@keyframes planb{
+	0%{
+		transform: translate3d(-100%,0,0);
+	}
+	100%{
+		transform: translate3d(0,0,0);
+	}
+}
+
+@-webkit-keyframes planc{
+	0%{
+		transform: scale(0.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes planc{
+	0%{
+		transform: scale(0.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes pland{
+	0%{
+		transform: scale(2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes pland{
+	0%{
+		transform: scale(2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes plane{
+	0%{
+		transform: scale(0.1) rotate(-720deg);
+	}
+	100%{
+		transform: scale(1) rotate(0);
+	}
+}
+@keyframes plane{
+	0%{
+		transform: scale(0.1) rotate(-720deg);
+	}
+	100%{
+		transform: scale(1) rotate(0);
+	}
+}
+
+#a:target{
+	-webkit-animation: plana 1s;
+	animation: plana 1s;
+	z-index:3;
+}
+#b:target{
+	-webkit-animation: planb 1s;
+	animation: planb 1s;
+	z-index:3;
+}
+#c:target{
+	-webkit-animation: planc 1s;
+	animation: planc 1s;
+	z-index:3;
+}
+#d:target{
+	-webkit-animation: pland 1s;
+	animation: pland 1s;
+	z-index:3;
+}
+#e:target{
+	-webkit-animation: plane 1s;
+	animation: plane 1s;
+	z-index:3;
+}
