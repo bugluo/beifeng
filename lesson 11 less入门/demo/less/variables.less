@@ -1,0 +1,14 @@
+@color: #4D926F;
+@highcolor: @color+#111111;
+@height: 20px;
+@maxheight: (@height + 5) * 2;
+
+#header {
+	@height: 30px;
+  color: @color;
+  height: @height;
+}
+h2 {
+  color: @height;
+  max-height: @maxheight;
+}

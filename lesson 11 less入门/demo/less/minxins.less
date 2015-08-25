@@ -1,0 +1,22 @@
+.border-radius(@radius: 5px){
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.size(@width:5px,@height:5px){
+	width:@width;
+	height:@height;
+}
+
+#header {
+	.size(10px,20px);
+}
+#footer {
+  .border-radius(6px);
+}

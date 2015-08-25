@@ -1,0 +1,8 @@
+#header {
+  width: 10px;
+  height: 20px;
+}
+#footer {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}

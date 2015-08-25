@@ -12,14 +12,12 @@
 
 	- 安装 <a href="https://nodejs.org/" target="_blank">nodejs</a>
   - 了解一下包管理工具 npm
-  - 设置安装淘宝的cnpm
   - npm config delete http-proxy
   - npm config delete https-proxy
-  - npm install -g cnpm --registry=https://registry.npm.taobao.org  如果是mac需要在前面加(sudo)开启系统权限
-	- 安装less
-		-cnpm install -g less
+  - 安装less
+		- npm install -g less --registry=https://registry.npm.taobao.org 
 	- 安装gulp
-    -cnpm install -g gulp
+    - npm install -g gulp --registry=https://registry.npm.taobao.org 
 
 ##使用编译环境
 

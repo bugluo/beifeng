@@ -1,0 +1,25 @@
+#header {
+  background: red;
+}
+#header .h1 {
+  font-size: 18px;
+}
+@media (max-width: 400) {
+  #header .h1 {
+    font-size: 12px;
+  }
+}
+#header .h1.maxFontsize {
+  font-size: 32px;
+}
+#header a {
+  color: white;
+}
+#header a:hover {
+  color: black;
+}
+@media (max-width: 800) {
+  #header {
+    background: black;
+  }
+}

@@ -1,0 +1,21 @@
+#header{
+	background:red;
+	.h1{
+		font-size: 18px;
+		@media (max-width: 400){
+			font-size: 12px;
+		}
+		&.maxFontsize{
+			font-size: 32px;
+		}
+	}
+	a{
+		color:white;
+		&:hover{
+			color:black;
+		}
+	}
+	@media (max-width: 800){
+		background: black;
+	}
+}
