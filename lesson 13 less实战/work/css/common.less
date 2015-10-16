@@ -1,0 +1,113 @@
+@import "../less/all.less";
+
+body {
+    .est-layout-fixed-header(60px, ~".nav");
+    .nav{
+    	background-color: #0b0b0c;
+    	.logo{
+    		float:left;
+    		.hide-text();
+    		background-image: url(../img/logo.png);
+    		.size(146px,32px);
+    		margin:0;
+    		margin-top:14px;
+    	}
+    }
+}
+.w{
+	width:1124px;
+	margin:0 auto;
+	position: relative;
+}
+.login-wrap{
+	position: relative;
+	margin-top:13px;
+	color:white;
+	float:right;
+	background-image: url(../img/login-b.png);
+	.size(135px,35px);
+	a{
+		position: absolute;
+		color:white;
+		text-decoration: none;
+		&.login{
+			top:10px;
+			left:25px;
+		}
+		&.registy{
+			top:10px;
+			left:82px;
+		}
+	}
+}
+.link{
+	color:white;
+	float:right;
+	margin-right:30px;
+	margin-top:22px;
+	li{
+		margin-right:22px;
+		list-style-type: none;
+		float:left;
+		a{
+			text-decoration: none;
+			color:white;
+		}
+		&.active{
+			a{
+
+				color:#90c31f;
+			}
+		}
+	}
+}
+.footer{
+	height:190px;
+	background-color:#e5e5e5;
+}
+.friendly-link{
+	width:570px;
+	float:left;
+	margin-right:175px;
+	overflow: hidden;
+	
+	p{
+		margin:35px 0 25px 0;
+		font-size: 18px;
+	}
+	ul{
+		padding:0;
+		list-style-type: none;
+		li{
+			font-size: 14px;
+			float:left;
+			margin-right:25px;
+		}
+	}
+}
+.company{
+	float:left;
+	margin-top:35px;
+	p{
+		margin:0;
+		margin-bottom: 17px;
+	}
+}
+.addresss-logo,.phone-logo,.mail-logo{
+	display: inline-block;
+	background-image: url(../img/footer-logo.png);
+	.size(19px,20px);
+	margin-right:8px;
+}
+.addresss-logo{
+	vertical-align: -4px;
+	background-position: 0 0;
+}
+.phone-logo{
+	vertical-align: -4px;
+	background-position: 0 -36px;
+}
+.mail-logo{
+	background-position: 0 -75px;
+	height:15px;
+}

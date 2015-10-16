@@ -1,0 +1,131 @@
+body > .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+}
+body > .est-body {
+  margin-top: 60px;
+  *zoom: 1;
+}
+body > .est-body:before,
+body > .est-body:after {
+  display: table;
+  content: "";
+}
+body > .est-body:after {
+  clear: both;
+}
+body .nav {
+  background-color: #0b0b0c;
+}
+body .nav .logo {
+  float: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url(../img/logo.png);
+  width: 146px;
+  height: 32px;
+  margin: 0;
+  margin-top: 14px;
+}
+.w {
+  width: 1124px;
+  margin: 0 auto;
+  position: relative;
+}
+.login-wrap {
+  position: relative;
+  margin-top: 13px;
+  color: white;
+  float: right;
+  background-image: url(../img/login-b.png);
+  width: 135px;
+  height: 35px;
+}
+.login-wrap a {
+  position: absolute;
+  color: white;
+  text-decoration: none;
+}
+.login-wrap a.login {
+  top: 10px;
+  left: 25px;
+}
+.login-wrap a.registy {
+  top: 10px;
+  left: 82px;
+}
+.link {
+  color: white;
+  float: right;
+  margin-right: 30px;
+  margin-top: 22px;
+}
+.link li {
+  margin-right: 22px;
+  list-style-type: none;
+  float: left;
+}
+.link li a {
+  text-decoration: none;
+  color: white;
+}
+.link li.active a {
+  color: #90c31f;
+}
+.footer {
+  height: 190px;
+  background-color: #e5e5e5;
+}
+.friendly-link {
+  width: 570px;
+  float: left;
+  margin-right: 175px;
+  overflow: hidden;
+}
+.friendly-link p {
+  margin: 35px 0 25px 0;
+  font-size: 18px;
+}
+.friendly-link ul {
+  padding: 0;
+  list-style-type: none;
+}
+.friendly-link ul li {
+  font-size: 14px;
+  float: left;
+  margin-right: 25px;
+}
+.company {
+  float: left;
+  margin-top: 35px;
+}
+.company p {
+  margin: 0;
+  margin-bottom: 17px;
+}
+.addresss-logo,
+.phone-logo,
+.mail-logo {
+  display: inline-block;
+  background-image: url(../img/footer-logo.png);
+  width: 19px;
+  height: 20px;
+  margin-right: 8px;
+}
+.addresss-logo {
+  vertical-align: -4px;
+  background-position: 0 0;
+}
+.phone-logo {
+  vertical-align: -4px;
+  background-position: 0 -36px;
+}
+.mail-logo {
+  background-position: 0 -75px;
+  height: 15px;
+}

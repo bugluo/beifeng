@@ -1,0 +1,107 @@
+.page1 {
+  background-image: linear-gradient(to right, #222222, #3c3b3c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ff222222', endColorstr='#ff3c3b3c', GradientType=1);
+  height: 984px;
+}
+.page1 .w {
+  overflow: hidden;
+  height: 984px;
+  width: 1124px;
+}
+.page1 .t-1 {
+  position: absolute;
+  top: 256px;
+  left: 0;
+}
+.page1 .i-1 {
+  position: absolute;
+  top: 88px;
+  left: 890px;
+}
+.page2 {
+  background: #f2f2f2;
+  height: 984px;
+}
+.page2 .t-2 {
+  position: absolute;
+  left: 560px;
+  top: 330px;
+}
+.page2 .i-2 {
+  position: absolute;
+  background-image: url(../img/image-2.png);
+  width: 956px;
+  height: 984px;
+  top: 0;
+  left: -400px;
+}
+.page3 {
+  background-image: linear-gradient(to right, #dbd6d2, #ece6e3);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ffdbd6d2', endColorstr='#ffece6e3', GradientType=1);
+  height: 984px;
+}
+.page3 .t-3 {
+  position: absolute;
+  top: 240px;
+  left: 450px;
+}
+.page3 .i-3 {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+}
+.page4 {
+  background-color: #ffffff;
+  height: 800px;
+}
+.page4 .t-4 {
+  width: 1064px;
+  display: block;
+  margin: 70px auto 110px;
+}
+.page4 .lb {
+  position: relative;
+  width: 1064px;
+  margin: 0 auto;
+}
+.page4 .lb .lb-single {
+  width: 1130px;
+}
+.page4 .lb .lb-single img {
+  margin-right: 53px;
+}
+.arrow-left {
+  position: absolute;
+  width: 21px;
+  height: 35px;
+  background-image: url(../img/ar-l.png);
+  left: -40px;
+  top: 155px;
+}
+.arrow-right {
+  position: absolute;
+  width: 21px;
+  height: 35px;
+  background-image: url(../img/ar-r.png);
+  right: -40px;
+  top: 155px;
+}
+.round {
+  width: 72px;
+  margin: 130px auto;
+}
+.round span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-image: url(../img/round.png);
+}
+.round span.active {
+  vertical-align: -1px;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/round-acitve.png);
+}

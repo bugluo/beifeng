@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bugluo",
+  "license": "MIT",
+  "devDependencies":{
+    "gulp-less":"^v3.0.3"
+  }
+}
