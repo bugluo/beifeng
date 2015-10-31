@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//条件选择
+		var a = 2;
+		var b = 2;
+		if(b == 2){
+			if (a == 2) {
+				console.log(true);
+			}else{
+				console.log(false);
+			}
+			console.log(2);
+		}
+
+		// if(a == 1){
+
+		// }else if(a==2){
+
+		// }else if(a == 3){
+
+		// }else{
+
+		// }
+
+		switch(a){
+			case 1:
+				console.log(1);
+				break;
+			case 2:
+				console.log(2);
+				break;
+			case 3:
+				console.log(3);
+				break;
+			default:
+				console.log(5);
+		}
+
+		//三元运算符
+		a == 1 ? console.log(1) : console.log(2)
+
+
+		//循环
+		a = [1,2,3,4];
+		// for(var i=0;i<a.length;i++){
+		// 	console.log(i,a[i]);
+		// }
+		var i = 0;
+		while(i<4){
+			console.log(i,a[i]);
+			i++;
+		}
+
+		var i = 'test';
+		var k = 100;
+		while(i){
+			k++;
+			console.log(k);
+			if(k == 120){
+				i = false;
+			}
+		}
+		
+	</script>
+</body>
+</html>

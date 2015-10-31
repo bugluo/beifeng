@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+	// typeof
+	// instanceof
+	// Object.prototype.toString.call()
+
+	var a = undefined;
+	var b = null;
+	var c = 1;
+	var d = '1aa';
+	var e = true;
+	var f = {};
+	var g = [];
+	var h = function(){
+
+	}
+	
+
+	function check(ar){
+		if(typeof ar === 'undefined'){
+			return 'undefined';
+		}else if(typeof ar === 'string'){
+			return 'string';
+		}else if(typeof ar === 'number'){
+			if(ar.toString() === 'NaN'){
+				return 'NaN';
+			}else{
+				return 'number';
+			}
+		}else if(typeof ar === 'function'){
+			return 'function';
+		}else if(Object.prototype.toString.call(ar) === '[object Null]'){
+			return 'null';
+		}else if(Object.prototype.toString.call(ar) === '[object Object]'){
+			return 'object';
+		}else if(Object.prototype.toString.call(ar) === '[object Array]'){
+			return 'array';
+		}
+	}
+</script>
+</html>
