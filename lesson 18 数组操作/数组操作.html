@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//定义
+	 var array = [1,2,3];
+	 console.log(array[1]);
+	//下标访问
+	 var array2 = [undefined,'a',function(){},[1,2,3]];
+
+	 console.log(array2[3][0]);
+
+	//添加
+	array.push(4);
+	array.unshift(10);
+	//params 位置,0,值,值,值 
+	array.splice(1,0,'test1');
+
+	//删除
+	array.pop();
+	array.shift();
+	array.splice(1,2);
+
+	//拷贝
+	t = array.slice(0);
+	var big = concat(array,t);
+
+	array.reverse();
+
+	//反序
+	array.sort(function(a,b){console.log(a,b);return b-a})
+
+	//正序
+	array.sort(function(a,b){console.log(a,b);return a-b})
+
+	//字符串化
+	var string = array.join('**');
+	//字符串变回数组
+	string.split('**');
+
+	//数组有一个重要的属性就是长度
+
+	//数组操作的黑魔法
+	var a = [123,321,213,12,3,123,123,123,123123,12,312312,31,23];
+	var max = 0;min = 0;
+	for(var i = 0;i<a.length;i++){
+		if(a[i]>max){
+			max = a[i];
+		}
+		if(a[i]<min){
+			min = a[i];
+		}
+	}
+	Math.max.apply(null, a);
+	Math.min.apply(null, a);
+
+	</script>
+</body>
+</html>

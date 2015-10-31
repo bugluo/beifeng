@@ -135,17 +135,17 @@ a[1] // 6
 
 数组的length属性，返回数组的成员数量。
 
-{% highlight javascript %}
+```javascript
 
 ['a', 'b', 'c'].length // 3
 
-{% endhighlight %}
+```
 
 JavaScript使用一个32位整数，保存数组的元素个数。这意味着，数组成员最多只有4294967295个（2<sup>32</sup>-1）个，也就是说length属性的最大值就是4294967295。
 
 数组的length属性与对象的length属性有区别，只要是数组，就一定有length属性，而对象不一定有。而且，数组的length属性是一个动态的值，等于键名中的最大整数加上1。
 
-{% highlight javascript %}
+```javascript
 
 var arr = ['a', 'b'];
 arr.length // 2
@@ -159,13 +159,13 @@ arr.length // 10
 arr[1000] = 'e';
 arr.length // 1001
 
-{% endhighlight %}
+```
 
 上面代码表示，数组的数字键不需要连续，length属性的值总是比最大的那个整数键大1。另外，这也表明数组是一种动态的数据结构，可以随时增减数组的成员。
 
 length属性是可写的。如果人为设置一个小于当前成员个数的值，该数组的成员会自动减少到length设置的值。
 
-{% highlight javascript %}
+```javascript
 
 var arr = [ 'a', 'b', 'c' ];
 arr.length // 3
@@ -173,37 +173,37 @@ arr.length // 3
 arr.length = 2;
 arr // ["a", "b"]
 
-{% endhighlight %}
+```
 
 上面代码表示，当数组的length属性设为2，即最大的整数键只能是1，那么整数键2（值为c）就已经不在数组中了，被自动删除了。
 
 将数组清空的一个有效方法，就是将length属性设为0。
 
-{% highlight javascript %}
+```javascript
 
 var arr = [ 'a', 'b', 'c' ];
 
 arr.length = 0;
 arr // []
 
-{% endhighlight %}
+```
 
 如果人为设置length大于当前元素个数，则数组的成员数量会增加到这个值，新增的位置填入空元素。
 
-{% highlight javascript %}
+```javascript
 
 var a = ['a'];
 
 a.length = 3;
 a // ["a", undefined × 2]
 
-{% endhighlight %}
+```
 
 上面代码表示，当length属性设为大于数组个数时，新增的位置都填充为undefined。
 
 如果人为设置length为不合法的值，JavaScript会报错。
 
-{% highlight javascript %}
+```javascript
 
 // 设置负值
 [].length = -1
@@ -217,11 +217,11 @@ a // ["a", undefined × 2]
 [].length = 'abc'
 // RangeError: Invalid array length
 
-{% endhighlight %}
+```
 
 值得注意的是，由于数组本质上是对象的一种，所以我们可以为数组添加属性，但是这不影响length属性的值。
 
-{% highlight javascript %}
+```javascript
 
 var a = [];
 
@@ -231,7 +231,7 @@ a.length // 0
 a[2.1] = "abc";
 a.length // 0
 
-{% endhighlight %}
+```
 
 上面代码将数组的键分别设为字符串和小数，结果都不影响length属性。因为，length属性的值就是等于最大的数字键加1，而这个数组没有整数键，所以length属性保持为0。
 

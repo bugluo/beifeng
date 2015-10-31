@@ -91,19 +91,19 @@ typeof运算符可以返回一个值的数据类型，可能有以下结果。
 
 数值、字符串、布尔值分别返回number、string、boolean。
 
-{% highlight javascript %}
+```javascript
 
 typeof 123 // "number"
 typeof "123" // "string"
 typeof false // "boolean"
 
-{% endhighlight %}
+```
 
 **（2）函数**
 
 函数返回function。
 
-{% highlight javascript %}
+```javascript
 
 // 定义一个空函数
 function f(){}
@@ -111,22 +111,22 @@ function f(){}
 typeof f
 // "function"
 
-{% endhighlight %}
+```
 
 **（3）undefined**
 
 undefined返回undefined。
 
-{% highlight javascript %}
+```javascript
 
 typeof undefined
 // "undefined"
 
-{% endhighlight %}
+```
 
 利用这一点，typeof可以用来检查一个没有声明的变量，而不报错。
 
-{% highlight javascript %}
+```javascript
 
 v
 // ReferenceError: v is not defined
@@ -134,11 +134,11 @@ v
 typeof v
 // "undefined"
 
-{% endhighlight %}
+```
 
 实际编程中，这个特点通常用在判断语句。
 
-{% highlight javascript %}
+```javascript
 
 // 错误的写法
 if (v){
@@ -151,26 +151,26 @@ if (typeof v === "undefined"){
   // ...
 }
 
-{% endhighlight %}
+```
 
 **（4）其他**
 
 除此以外，都返回object。
 
-{% highlight javascript %}
+```javascript
 
 typeof window // "object"
 typeof {} // "object"
 typeof [] // "object"
 typeof null // "object"
 
-{% endhighlight %}
+```
 
 从上面代码可以看到，空数组（[]）的类型也是object，这表示在JavaScript内部，数组本质上只是一种特殊的对象。另外，null的类型也是object，这是由于历史原因造成的，为了兼容以前的代码，后来就没法修改了，并不是说null就属于对象，本质上null是一个类似于undefined的特殊值。
 
 既然typeof对数组（array）和对象（object）的显示结果都是object，那么怎么区分它们呢？instanceof运算符可以做到。
 
-{% highlight javascript %}
+```javascript
 
 var o = {};
 var a = [];
@@ -178,7 +178,7 @@ var a = [];
 o instanceof Array // false
 a instanceof Array // true
 
-{% endhighlight %}
+```
 
 instanceof运算符的详细解释，请见《面向对象编程》一章。
 
@@ -188,7 +188,7 @@ instanceof运算符的详细解释，请见《面向对象编程》一章。
 
 首先，null与undefined都可以表示“无”，含义非常相似。将一个变量赋值为undefined或null，老实说，几乎没区别。
 
-{% highlight javascript %}
+```javascript
 
 var a = undefined;
 
@@ -196,13 +196,13 @@ var a = undefined;
 
 var a = null;
 
-{% endhighlight %}
+```
 
 上面代码中，a变量分别被赋值为undefined和null，这两种写法几乎等价。
 
 在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。
 
-{% highlight javascript %}
+```javascript
 
 if (!undefined) 
     console.log('undefined is false');
@@ -215,7 +215,7 @@ if (!null)
 undefined == null
 // true
 
-{% endhighlight %}
+```
 
 上面代码说明，两者的行为是何等相似！Google公司开发的JavaScript语言的替代品Dart语言，就明确规定只有null，没有undefined！
 
@@ -225,7 +225,7 @@ undefined == null
 
 1995年JavaScript诞生时，最初像Java一样，只设置了null作为表示"无"的值。根据C语言的传统，null被设计成可以自动转为0。
 
-{% highlight javascript %}
+```javascript
 
 Number(null)
 // 0
@@ -233,7 +233,7 @@ Number(null)
 5 + null
 // 5
 
-{% endhighlight %}
+```
 
 但是，JavaScript的设计者Brendan Eich，觉得这样做还不够，有两个原因。
 
@@ -243,7 +243,7 @@ Number(null)
 
 因此，Brendan Eich又设计了一个undefined。他是这样区分的：null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN。
 
-{% highlight javascript %}
+```javascript
 
 Number(undefined)
 // NaN
@@ -251,7 +251,7 @@ Number(undefined)
 5 + undefined
 // NaN
 
-{% endhighlight %}
+```
 
 但是，这样的区分在实践中很快就被证明不可行。目前，null和undefined基本是同义的，只有一些细微的差别。
 
@@ -275,7 +275,7 @@ undefined表示"缺少值"，就是此处应该有一个值，但是还未定义
 
 - 函数没有返回值时，默认返回undefined。
 
-{% highlight javascript %}
+```javascript
 
 var i;
 i // undefined
@@ -289,17 +289,17 @@ o.p // undefined
 var x = f();
 x // undefined
 
-{% endhighlight %}
+```
 
 **（4）null的特殊之处**
 
 null的特殊之处在于，JavaScript把它包含在对象类型（object）之中。
 
-{% highlight javascript %}
+```javascript
 
 typeof null // "object"
 
-{% endhighlight %}
+```
 
 上面代码表示，查询null的类型，JavaScript返回object（对象）。
 
@@ -331,18 +331,18 @@ JavaScript的标识名区分大小写，所以undefined和null不同于Undefined
 
 布尔值往往用于程序流程的控制，请看一个例子。
 
-{% highlight javascript %}
+```javascript
 
 if (""){ console.log(true);}
 // 没有任何输出
 
-{% endhighlight %}
+```
 
 上面代码的if命令后面的判断条件，预期应该是一个布尔值，所以JavaScript自动将空字符串，转为布尔值false，导致程序不会进入代码块，所以没有任何输出。
 
 需要特别注意的是，空数组（[]）和空对象（{}）对应的布尔值，都是true。
 
-{% highlight javascript %}
+```javascript
 
 if ([]){ console.log(true);}
 // true
@@ -350,4 +350,4 @@ if ([]){ console.log(true);}
 if ({}){ console.log(true);}
 // true
 
-{% endhighlight %}
+```
