@@ -381,130 +381,19 @@ for (i in o){
 
 ```
 
-注意，for...in循环遍历的是对象所有可enumberable的属性，其中不仅包括定义在对象本身的属性，还包括对象继承的属性。
 
+### 浅拷贝 深拷贝
 ```javascript
+浅拷贝
+var a = {a:1,b:2};
+b = a;
+a.a = 3;
+b;
 
-// name是Person本身的属性
-function Person(name) {
-  this.name = name;
-}
-
-// describe是Person.prototype的属性
-Person.prototype.describe = function () {
-  return 'Name: '+this.name;
-};
-
-var person = new Person('Jane');
-
-// for...in循环会遍历实例自身的属性（name），
-// 以及继承的属性（describe）
-for (var key in person) {
-  console.log(key);
-}
-// name
-// describe
-
-```
-
-上面代码中，name是对象本身的属性，describe是对象继承的属性，for-in循环的遍历会包括这两者。
-
-如果只想遍历对象本身的属性，可以使用hasOwnProperty方法，在循环内部做一个判断。
-
-```javascript
-
-for (var key in person) {
-    if (person.hasOwnProperty(key)) {
-        console.log(key);
-    }
-}
-// name
-
-```
-
-为了避免这一点，可以新建一个继承null的对象。由于null没有任何属性，所以新对象也就不会有继承的属性了。
-
-## 类似数组的对象
-
-在JavaScript中，有些对象被称为“类似数组的对象”（array-like object）。意思是，它们看上去很像数组，可以使用length属性，但是它们并不是数组，所以无法使用一些数组的方法。
-
-下面就是一个类似数组的对象。
-
-```javascript
-
-var a = {
-    0:'a',
-    1:'b',
-    2:'c',
-    length:3
-};
-
-a[0] // 'a'
-a[2] // 'c'
-a.length // 3
-
-```
-
-上面代码的变量a是一个对象，但是看上去跟数组很像。所以只要有数字键和length属性，就是一个类似数组的对象。当然，变量a无法使用数组特有的一些方法，比如pop和push方法。而且，length属性不是动态值，不会随着成员的变化而变化。
-
-```javascript
-
-a[3] = 'd';
-
-a.length // 3
-
-```
-
-上面代码为对象a添加了一个数字键，但是length属性没变。这就说明了a不是数组。
-
-典型的类似数组的对象是函数的arguments对象，以及大多数DOM元素集，还有字符串。
-
-```javascript
-
-// arguments对象
-function args() { return arguments }
-var arrayLike = args('a', 'b');
-
-arrayLike[0] // 'a'
-arrayLike.length // 2
-arrayLike instanceof Array // false
-
-// DOM元素集
-var elts = document.getElementsByTagName('h3');
-elts.length // 3
-elts instanceof Array // false
-
-// 字符串
-'abc'[1] // 'b'
-'abc'.length // 3
-'abc' instanceof Array // false
-
-```
-
-通过函数的call方法，可以用slice方法将类似数组的对象，变成真正的数组。
-
-```javascript
-
-var arr = Array.prototype.slice.call(arguments);
-
-```
-
-遍历类似数组的对象，可以采用for循环，也可以采用数组的forEach方法。
-
-```javascript
-
-// for循环
-function logArgs() {
-    for (var i=0; i<arguments.length; i++) {
-        console.log(i+'. '+arguments[i]);
-    }
-}
-
-// forEach方法
-function logArgs() {
-    Array.prototype.forEach.call(arguments, function (elem, i) {
-        console.log(i+'. '+elem);
-    });
+深拷贝
+var a = {};
+for(var i in a){
+  b[i] = a[i]
 }
 
 ```
