@@ -391,9 +391,13 @@ a.a = 3;
 b;
 
 深拷贝
-var a = {};
+var a = {a:1,b:2};
 for(var i in a){
   b[i] = a[i]
 }
+
+深拷贝黑魔法
+var b = JSON.parse(JSON.stringify(a));
+
 
 ```

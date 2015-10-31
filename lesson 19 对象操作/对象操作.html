@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// 声明
+	var object = {};
+	var object = new Object();
+
+	//赋值
+	object["1 23"] = 123;
+	object.key = 123;
+	var key = 0;
+	var key 1 = 1;
+	object[key] = 123;
+
+	//读值
+	object[key+key1]
+	object["1 23"];
+
+	//判断对象是否存在
+	//xxx
+	if(key in window){
+
+	}
+	if(typeof key ){
+
+	}
+
+	//循环遍历对象
+	for(var i in object){
+		//i为key, object[i]为value
+		console.log(i,object[i])
+	}
+
+	//浅拷贝
+	var a = {a: 1, b: 2, c: 3};
+	var b = a;
+	a;
+	b;
+	a.a = 5;
+	b.a;
+
+	//深拷贝
+	var b = {};
+	for(var i in a){
+		//i为key, object[i]为value
+		b[i] = a[i]
+	}
+
+	//深拷贝黑魔法
+	var b = JSON.parse(JSON.stringify(a));
+
+
+	</script>
+</body>
+</html>
