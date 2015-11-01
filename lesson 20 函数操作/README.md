@@ -1,12 +1,4 @@
----
-title: 函数
-layout: page
-category: grammar
-date: 2012-12-15
-modifiedOn: 2013-12-19
----
-
-## 概述
+## 函数
 
 ### 函数的声明
 
