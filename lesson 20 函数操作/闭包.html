@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//闭包
+		var close = function(){
+			var t = 0;
+			return function(){
+				t++;
+				console.log(t);
+			}
+		}
+		var c = close();
+		console.log(c);
+		c();
+
+		//立即调用函数
+		var a = (function(){
+			var t = 0;
+			return {
+				plus : function(){
+					t ++;
+					console.log(t);
+				},
+				remove : function(){
+					delete t;
+				}
+			}
+		})()
+
+		console.log(a);
+		a.plus();
+
+
+		//使用场景
+		for(var i = 0;i<10;i++){
+			(function(a){
+				setTimeout(function(){
+					console.log(a);
+				},a*1000);
+			})(i)
+		}
+	</script>
+</body>
+</html>

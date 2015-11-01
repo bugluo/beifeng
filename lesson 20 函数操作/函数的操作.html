@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//声明函数        /* 函数的参数 */
+		// var param = 4;
+		
+
+		// var object = {a:3};
+
+		// //参数按时顺序传递，而已符合值传递的原则，object array依然是地址传递。
+		// //参数可以传任何变量
+		// function handler(callback){
+		// 	alert(2);
+		// 	callback();
+		// 	//处理方法	
+		// }
+		// handler(function(){
+		// 	alert(1);
+		// });
+		// alert(object.a);
+		// var handler = function(){
+		// 	alert(1);
+		// }
+
+		// var handler = function handler(){
+
+		// }
+
+		//return的作用
+
+		// function min(a,b,c,d){
+		// 	//中断函数
+		// 	if(typeof a == 'string'){
+		// 		return 'error';
+		// 	}
+		// 	var min = 0;
+
+		// 	//返回具体的值
+		// 	return min;
+		// }
+		// var k = min();
+		// alert(k);
+
+
+		//可以传任何个数的参数
+
+		function a(x,y){
+			if(y){
+				return x*y;
+			}
+			return x*x;
+		}
+		// alert(a(3));
+		// alert(max(3,4,3,4,5));
+
+		//不定长度的参数处理
+		function max(){
+			var max = 0;
+			for(var i = 0;i<arguments.length;i++){
+				if(max <arguments[i]){
+					max = arguments[i];
+				}
+			}
+			return max;
+		}
+
+		//作用域
+		var a = 1;
+		function text(){
+			var b = 2;
+			console.log(a);
+		}
+		text();
+		console.log(b);
+	</script>
+</body>
+</html>
