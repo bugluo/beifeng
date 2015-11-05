@@ -689,28 +689,6 @@ Array.prototype.slice.apply({length:1})
 
 上面代码的apply方法的参数都是对象，但是返回结果都是数组，这就起到了将对象转成数组的目的。从上面代码可以看到，这个方法起作用的前提是，被处理的对象必须有length属性，以及相对应的数字键。
 
-**（4）绑定回调函数的对象**
-
-上一节按钮点击事件的例子，可以改写成
-
-```javascript
-
-var o = new Object();
-
-o.f = function (){
-    console.log(this === o);
-}
-
-var f = function (){
-  o.f.apply(o);
-  // 或者 o.f.call(o);
-};
-
-$("#button").on("click", f);
-
-```
-
-点击按钮以后，控制台将会显示true。由于apply方法（或者call方法）不仅绑定函数执行时所在的对象，还会立即执行函数，因此不得不把绑定语句写在一个函数体内。更简洁的写法是采用下面介绍的bind方法。
 
 ### bind方法
 
@@ -833,19 +811,7 @@ if(!('bind' in Function.prototype)){
 
 ```
 
-**（3）jQuery的proxy方法**
-
-除了用bind方法绑定函数运行时所在的对象，还可以使用jQuery的$.proxy方法，它与bind方法的作用基本相同。
-
-```javascript
-
-$("#button").on("click", $.proxy(o.f, o));
-
-```
-
-上面代码表示，$.proxy方法将o.f方法绑定到o对象。
-
-**（4）结合call方法使用**
+**（3）结合call方法使用**
 
 利用bind方法，可以改写一些JavaScript原生方法的使用形式，以数组的slice方法为例。
 

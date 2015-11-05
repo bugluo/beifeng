@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//错误处理
+
+		//throw
+		// console.log(1);
+		// throw 'error';
+		// console.log(2);
+
+
+		//try catch
+		// console.log(1);
+		// var data;
+		// try{
+		// 	data = JSON.parse('tesjtojeo' || '{}');
+		// }catch(ex){
+		// 	data = {};
+		// }finally{
+		// 	// handler(data);
+		// }	
+		// console.log(2);
+
+		//try...catch...finally这三者之间的执行顺序
+		// function a(){
+		// 	try {
+		//         console.log(0);
+		//         throw "bug";
+		//     } catch(e) {
+		//         console.log(1);
+		//         return true;   // 这句会延迟到finally代码块结束再执行
+		//         console.log(2); // 不会运行
+		//     } finally {
+		//         console.log(3);
+		//         return false; // 这句会覆盖掉前面那句return
+		//         console.log(4); // 不会运行
+		//     }
+		// }
+		
+		// var t = a();
+		// console.log(t);
+
+		window.onerror = function(msg, url, line) {
+		  // alert("ERROR: " + msg + "\n" + url + ":" + line);
+		  return true;
+		}
+		JSON.parse('tesjtojeo' || '{}');
+		console.log(1);
+	</script>
+</body>
+</html>
