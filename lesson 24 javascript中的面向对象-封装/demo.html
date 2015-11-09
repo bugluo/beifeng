@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function a(){
+		this.name = 'baby';
+		this.age = 0;
+	}
+	a.prototype.color = 'red';
+	a.prototype.add = function(){
+		this.age++;
+	}
+	var b = new a;
+	console.log(b.name,b.color);
+	a.name = 'fater';
+	a.prototype.color = 'blue';
+	console.log(b.name,b.color);
+
+
+	function MyArray (){}
+
+	MyArray.prototype = new Array();
+	
+	MyArray.prototype.constructor = MyArray;
+
+	var mine = new MyArray();
+	mine.push(1, 2, 3);
+
+	</script>
+</body>
+</html>
