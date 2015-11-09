@@ -1,321 +1,120 @@
+## javascript的继承
 
-
-## 概述
-
-JavaScript语言的所有对象，都有自己的继承链。也就是说，每个对象都有一个上级对象，称为prototype对象（只有`null`除外，它没有自己的prototype对象）。上级对象的属性和方法，都可以从下级对象上获取。
-
-ES5提供方法，可以读取当前对象的prototype对象，而没有提供改写它的标准方法。
+从一个简单的需求开始
+现从前台抽离一个model名为Person，其有基本属性name和age，默认每个人都会说话，因此将说话的功能say放在了原型对象上，以供每个实例享用。现在对于Man来说，它需要继承Person的基本属性，并且在此基础上添加自己特有的属性。
 
 ```javascript
-var p = Object.getPrototypeOf(obj);
-```
-
-所以，ES5一般不改写prototype对象，而是重新生成一个新的对象。
-
-```javascript
-var obj = Object.create(p);
-```
-
-但是，大多数浏览器都支持使用一个非标准的`__proto__`属性（前后各两个下划线），改写原型对象。
-
-```javascript
-var obj = {};
-var p = {};
-
-obj.__proto__ = p;
-obj.__proto__ === p // true
-```
-
-上面代码通过`__proto__`属性，将`p`对象设为`obj`对象的原型。
-
-下面是一个实际的例子。
-
-```javascript
-var a = { x: 1};
-var b = { __proto__: a};
-b.x // 1
-```
-
-上面代码中，`b`对象本身并没有`x`属性，但是JavaScript引擎通过`__proto__`属性，找到它的原型对象`a`，然后读取`a`的`x`属性。
-
-原型对象自己的`__proto__`属性，也可以指向其他对象，从而一级一级地形成“原型链”（prototype chain）。
-
-```javascript
-var a = { x: 1 };
-var b = { __proto__: a};
-var c = { __proto__: b};
-
-c.x // 1
-```
-
-## 构造函数的继承
-
-这个小节介绍，如何让一个构造函数，继承另一个构造函数。
-
-假定有一个`Shape`构造函数。
-
-```javascript
-function Shape() {
-  this.x = 0;
-  this.y = 0;
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
 }
-
-Shape.prototype.move = function(x, y) {
-  this.x += x;
-  this.y += y;
-  console.info('Shape moved.');
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
 };
-```
-
-`Rectangle`构造函数继承`Shape`。
-
-```javascript
-function Rectangle() {
-  Shape.call(this); // 调用父类构造函数
-}
-
-// 子类继承父类的方法
-Rectangle.prototype = Object.create(Shape.prototype);
-Rectangle.prototype.constructor = Rectangle;
-
-var rect = new Rectangle();
-
-rect instanceof Rectangle  // true
-rect instanceof Shape  // true
-
-rect.move(1, 1) // 'Shape moved.'
-```
-
-上面代码表示，构造函数的继承分成两部分，一部分是子类调用父类的构造方法，另一部分是子类的原型指向父类的原型。
-
-上面代码中，子类是整体继承父类。有时，只需要单个方法的继承，这时可以采用下面的写法。
-
-```javascript
-ClassB.prototype.print = function() {
-  ClassA.prototype.print.call(this);
-  // some code
+function Man() {
+    //my own properties
 }
 ```
 
-上面代码中，子类B的`print`方法先调用父类A的`print`方法，再部署自己的代码。这就等于继承了父类A的`print`方法。
-
-## `__proto__`属性
-
-`__proto__`属性指向当前对象的原型对象，即构造函数的prototype属性。
+### 几种不同的继承方式
 
 ```javascript
-var obj = new Object();
-
-obj.__proto__ === Object.prototype
-// true
-
-obj.__proto__ === obj.constructor.prototype
-// true
-```
-
-上面代码首先新建了一个对象`obj`，它的`__proto__`属性，指向构造函数（`Object`或`obj.constructor`）的prototype属性。所以，两者比较以后，返回`true`。
-
-因此，获取实例对象`obj`的原型对象，有三种方法。
-
-- `obj.__proto__`
-- `obj.constructor.prototype`
-- `Object.getPrototypeOf(obj)`
-
-第三种方法的用法如下。
-
-```javascript
-var o = new Object();
-
-o.__proto__ === Object.getPrototypeOf(o)
-// true
-```
-
-可以使用Object.getPrototypeOf方法，检查浏览器是否支持`__proto__`属性，老式浏览器不支持这个属性。
-
-```javascript
-Object.getPrototypeOf({ __proto__: null }) === null
-```
-
-上面代码将一个对象的`__proto__`属性设为`null`，然后使用`Object.getPrototypeOf`方法获取这个对象的原型，判断是否等于`null`。如果当前环境支持`__proto__`属性，两者的比较结果应该是`true`。
-
-有了`__proto__`属性，就可以很方便得设置实例对象的原型了。假定有三个对象`machine`、`vehicle`和`car`，其中`machine`是`vehicle`的原型，`vehicle`又是`car`的原型，只要两行代码就可以设置。
-
-```javascript
-vehicle.__proto__ = machine;
-car.__proto__ = vehicle;
-```
-
-下面是一个实例，通过`__proto__`属性与`constructor.prototype`属性两种方法，分别读取定义在原型对象上的属性。
-
-```javascript
-Array.prototype.p = 'abc';
-var a = new Array();
-
-a.__proto__.p // abc
-a.constructor.prototype.p // abc
-```
-
-显然，`__proto__`看上去更简洁一些。
-
-通过构造函数生成实例对象时，实例对象的`__proto__`属性自动指向构造函数的prototype对象。
-
-```javascript
-var f = function (){};
-var a = {};
-
-f.prototype = a;
-var o = new f();
-
-o.__proto__ === a
-// true
-```
-
-## 属性的继承
-
-属性分成两种。一种是对象自身的原生属性，另一种是继承自原型的继承属性。
-
-### 对象的原生属性
-
-对象本身的所有属性，可以用Object.getOwnPropertyNames方法获得。
-
-```javascript
-
-Object.getOwnPropertyNames(Date)
-// ["parse", "arguments", "UTC", "caller", "name", "prototype", "now", "length"]
-
-```
-
-对象本身的属性之中，有的是可以枚举的（enumerable），有的是不可以枚举的。只获取那些可以枚举的属性，使用Object.keys方法。
-
-```javascript
-
-Object.keys(Date)
-// []
-
-```
-
-判断对象是否具有某个属性，使用hasOwnProperty方法。
-
-```javascript
-
-Date.hasOwnProperty('length')
-// true
-
-Date.hasOwnProperty('toString')
-// false
-
-```
-
-### 对象的继承属性
-
-用Object.create方法创造的对象，会继承所有原型对象的属性。
-
-```javascript
-
-var proto = { p1: 123 };
-var o = Object.create(proto);
-
-o.p1
-// 123
-
-o.hasOwnProperty("p1")
-// false
-
-```
-
-### 获取所有属性
-
-判断一个对象是否具有某个属性（不管是自身的还是继承的），使用in运算符。
-
-```javascript
-
-"length" in Date
-// true
-
-"toString" in Date
-// true
-
-```
-
-获得对象的所有可枚举属性（不管是自身的还是继承的），可以使用for-in循环。
-
-```javascript
-
-var o1 = {p1:123};
-
-var o2 = Object.create(o1,{
-  p2: { value: "abc", enumerable: true }
-});
-
-for (p in o2) {console.info(p);}
-// p2
-// p1
-
-```
-
-为了在for...in循环中获得对象自身的属性，可以采用hasOwnProperty方法判断一下。
-
-```javascript
-
-for ( var name in object ) {
-  if ( object.hasOwnProperty(name) ) {
-    /* loop code */
-  }
+1.原型链继承
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
 }
-
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man() {
+}
+Man.prototype = new Person('pursue');
+var man1 = new Man();
+man1.say(); //hello, my name is pursue
+var man2 = new Man();
+console.log(man1.say === man2.say);//true
+console.log(man1.name === man2.name);//true
 ```
 
-获得对象的所有属性（不管是自身的还是继承的，以及是否可枚举），可以使用下面的函数。
+这种继承方式很直接，为了获取Person的所有属性方法(实例上的和原型上的)，直接将父类的实例new Person('pursue')赋给了子类的原型，其实子类的实例man1,man2本身是一个完全空的对象，所有的属性和方法都得去原型链上去找，因而找到的属性方法都是同一个。
+所以直接利用原型链继承是不现实的。
 
 ```javascript
-
-function inheritedPropertyNames(obj) {
-  var props = {};
-  while(obj) {
-    Object.getOwnPropertyNames(obj).forEach(function(p) {
-      props[p] = true;
-    });
-    obj = Object.getPrototypeOf(obj);
-  }
-  return Object.getOwnPropertyNames(props);
+2.利用构造函数继承
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
 }
-
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
+}
+//Man.prototype = new Person('pursue');
+var man1 = new Man('joe');
+var man2 = new Man('david');
+console.log(man1.name === man2.name);//false
+man1.say(); //say is not a function
 ```
 
-用法如下：
+这里子类的在构造函数里利用了apply去调用父类的构造函数，从而达到继承父类属性的效果，比直接利用原型链要好的多，至少每个实例都有自己那一份资源，但是这种办法只能继承父类的实例属性，因而找不到say方法，为了继承父类所有的属性和方法，则就要修改原型链，从而引入了组合继承方式。
 
 ```javascript
-
-inheritedPropertyNames(Date)
-// ["caller", "constructor", "toString", "UTC", "call", "parse", "prototype", "__defineSetter__", "__lookupSetter__", "length", "arguments", "bind", "__lookupGetter__", "isPrototypeOf", "toLocaleString", "propertyIsEnumerable", "valueOf", "apply", "__defineGetter__", "name", "now", "hasOwnProperty"]
-
+3.组合继承
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
+}
+Man.prototype = new Person();
+var man1 = new Man('joe');
+var man2 = new Man('david');
+console.log(man1.name === man2.name);//false
+console.log(man1.say === man2.say);//true
+man1.say(); //hello, my name is joe
 ```
 
-## 对象的拷贝
-
-如果要拷贝一个对象，需要做到下面两件事情。
-
-- 确保拷贝后的对象，与原对象具有同样的prototype原型对象。
-- 确保拷贝后的对象，与原对象具有同样的属性。
-
-下面就是根据上面两点，编写的对象拷贝的函数。
+需要注意的是man1和man2的实例属性其实是覆盖了原型属性，但是并没要覆盖掉原型上的say方法（因为它们没有），所以这里man1.say === man2.say依然返回true，因而需要十分小心没有覆盖掉的原型属性，因为它是所有实例共有的。
 
 ```javascript
+4.寄生组合继承
+说实话我真不知道下面的这种形式叫这名字，但是它确实是最流行，最经典的javascript的继承方式。
+其实，只需要明白原型对象的结构即可：
 
-function copyObject(orig) {
-  var copy = Object.create(Object.getPrototypeOf(orig));
-  copyOwnPropertiesFrom(copy, orig);
-  return copy;
+function Person (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
 }
+Man.prototype = Object.create(Person.prototype);//a.
+Man.prototype.constructor = Man;//b.
+var man1 = new Man('pursue');
+var man2 = new Man('joe');
+console.log(man1.say == man2.say);
+console.log(man1.name == man2.name);
 
-function copyOwnPropertiesFrom(target, source) {
-  Object
-  .getOwnPropertyNames(source)
-  .forEach(function(propKey) {
-    var desc = Object.getOwnPropertyDescriptor(source, propKey);
-    Object.defineProperty(target, propKey, desc);
-  });
-  return target;
+其实寄生组合继承和上面的组合继承区别仅在于构造子类原型对象的方式上（a.和b.），这里用到了Object.creat(obj)方法，该方法会对传入的obj对象进行浅拷贝，类似于：
+
+function create(obj){
+    function T(){};
+    T.prototype = obj;
+    return new T();
 }
-
 ```
+
+因此，a.会将子类的原型对象与父类的原型对象进行很好的连接，而并不像一般的组合继承那样直接对子类的原型进行复制（如Man.prototype = new Person();）,这样只是很暴力的在对属性进行覆盖。而寄生组合继承方式则对实例属性和原型属性分别进行了继承，在实现上更加合理。
+
+注意:代码b.并不会改变instanceof的结果，但是对于需要用到construcor的场景，这么做更加严谨。
+
