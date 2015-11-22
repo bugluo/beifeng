@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var model = (function(){
+		var _count = 1;
+		function add(){
+			_count++;
+			return _count;	
+		}
+		return {
+			add:add
+		}
+	})()
+
+	console.log(model.add());
+	console.log(model._count);
+
+
+	var car = (function(car){
+		Window = {
+			width:30
+		}
+		car.Window = Window;
+		return car;
+	})(car || {});
+
+	car = (function(car){
+		TY = {
+			round:15
+		}
+		car.TY = TY;
+		return car;
+	})(car || {});
+
+	console.log(car);
+	</script>
+</body>
+</html>

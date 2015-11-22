@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Person (name, age) {
+		    this.name = name;
+		    this.age = age;
+		}
+		Person.prototype.say = function(){
+		    console.log('hello, my name is ' + this.name);
+		};
+
+		function Man() {
+		    Person.apply(this, arguments);
+		    this.mansize = 18;
+		}
+		Man.prototype = new Person();
+		Man.prototype.constructor = Man;
+
+		Man.prototype.say = function(){
+		    Person.prototype.say.apply(this, arguments);
+		    console.log('hello, man is cool,my size = '+this.mansize);
+		}
+		var man =new Man('bugluo',18);
+		var man2 =new Man('bugluo',18);
+		console.log(man.say());
+		console.log(man2.say());
+	</script>
+</body>
+</html>
