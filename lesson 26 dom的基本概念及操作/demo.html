@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="remove">
+		remove me
+		<p>text</p>
+	</div>
+</body>
+
+<script>
+
+//删除节点
+// function remove(dom){
+// 	if(dom.parentNode){
+// 		dom.parentNode.removeChild(dom);
+// 	}
+// }
+// setTimeout(function(){
+// 	remove(document.getElementById('remove'));
+// },1000)
+
+//几种txt方法的比较
+
+console.log(document.getElementById('remove').textContent);
+console.log(document.getElementById('remove').innerText);
+console.log(document.getElementById('remove').innerHTML);
+console.log(document.getElementById('remove').outerHTML);
+console.log(document.getElementById('remove').outerText);
+
+// document.getElementById('remove').textContent = 'remove me<p>none</p>'
+document.getElementById('remove').innerHTML = encodeURIComponent('remove me<img src="fadf.com" onerror="javascript:alert(1)"/>')
+// document.getElementById('remove').textContent = 'remove me<p>none</p>'
+
+</script>
+</html>
