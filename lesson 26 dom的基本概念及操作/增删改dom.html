@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#text{
+		border:10px solid red;
+		margin:10px;
+		padding:10px;
+		}</style>
+</head>
+<body>
+<div id="text">
+	<div>1</div>
+	<div>23</div>
+	<div>34</div>
+	<div>12</div>
+	<div>45</div><div>1</div>
+	<div>23</div>
+	<div>34</div>
+	<div>12</div>
+	<div>45</div><div>1</div>
+	<div>23</div>
+	<div>34</div>
+	<div>12</div>
+	<div>45</div><div>1</div>
+	<div>23</div>
+	<div>34</div>
+	<div>12</div>
+	<div>45</div><div>1</div>
+	<div>23</div>
+	<div>34</div>
+	<div>12</div>
+	<div>45</div>
+</div>
+<ul>
+	<li>old</li>
+</ul>
+<div class="aab"></div>
+</body>
+
+	<script>
+	var text = document.getElementById('text');
+	// console.log(text.childNodes);
+	//查 
+	console.log(text.children);
+
+	//增加
+	var p = document.createElement("p");
+	p.textContent = '<?>';
+
+	document.body.appendChild(p);
+
+	var text1 = document.createTextNode('1');
+	var li = document.createElement('li');
+	li.appendChild(text1);
+
+	var ul = document.querySelector('ul');
+	// ul.insertBefore(li,ul.firstChild);
+
+	function insert(parentdom,insertdom){
+		parentdom.insertBefore(insertdom,parentdom.firstChild);
+	}
+	insert(ul,li);
+
+	// 视窗大小
+	var html =  document.getElementById('text');
+	console.log(html.clientHeight);
+
+	//html高度
+	console.log(html.offsetHeight);
+	</script>
+</html>

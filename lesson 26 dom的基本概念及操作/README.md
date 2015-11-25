@@ -357,7 +357,7 @@ divA.parentNode.replaceChild(newSpan,divA);
 
 上面代码是如何替换指定节点。
 
-## NodeList接口
+## NodeList接口，HTMLCollection接口
 
 节点对象都是单个节点，但是有时会需要一种数据结构，能够容纳多个节点。DOM提供两种接口，用于部署这种节点的集合：NodeList接口和HTMLCollection接口。
 
@@ -418,6 +418,14 @@ for (var i = 0; i < myNodeList.length; ++i) {
 不要使用for...in循环去遍历NodeList接口对象，因为for...in循环会将非数字索引的length属性和下面要讲到的item方法，也遍历进去，而且不保证各个成员遍历的顺序。
 
 
+### HTMLCollection接口
+
+HTMLCollection接口与NodeList接口类似，也是节点的集合，但是集合成员都是Element节点。
+
+```javascript
+
+```
+
 ## html元素
 
 html元素是网页的根元素，document.documentElement就指向这个元素。
@@ -438,15 +446,11 @@ dataset属性用于操作HTML标签元素的data-*属性。目前，Firefox、Ch
 
 假设有如下的网页代码。
 
-{% highlight html %}
+```javascript
 
 <div id="myDiv" data-id="myId"></div>
 
-```
-
 以data-id属性为例，要读取这个值，可以用dataset.id。
-
-```javascript
 
 var id = document.getElementById("myDiv").dataset.id;
 
