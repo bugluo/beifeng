@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<iframe src="iframe.html" frameborder="0"></iframe>
+	<input type="text">
+</body>
+<script>
+	//对于iframe的document 不能跨域
+	document.getElementsByTagName('iframe')[0].contentDocument;
+
+</script>
+</html>

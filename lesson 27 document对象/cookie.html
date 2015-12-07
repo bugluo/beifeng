@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		function getCookie(key){
+			var c = document.cookie;
+			var carray = c.split(';');
+			var cobject = {};
+			for(var i = 0;i<carray.length;i++){
+				carray[i] = carray[i].split('=');
+				cobject[carray[i][0].trim()] = carray[i][1].trim();
+			}
+			console.log(cobject);
+			return cobject[key];
+		}
+		function setCookie(key,value,expires){
+			document.cookie = expires ? key + '=' + value + ';expires='+expires:key + '=' + value;
+		}
+	</script>
+</body>
+</html>
