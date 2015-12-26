@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="a c b e f g">
+		
+	</div>
+	<script>
+
+		function addClass(element,className){
+			element.className += ' '+ className;
+		}
+
+		function removeClass(element,className){
+			var n = element.className;
+			n = n.split(' ');
+			for (var i = 0; i < n.length; i++) {
+				if(n[i] == className){
+					n.splice(i,1);
+				}
+			};
+			n = n.join(' ');
+			element.className = n;
+		}
+
+		function hasClass(element,className){
+			var n = element.className;
+			if(n.indexOf(className+' ') == 0 || n.indexOf(' ' +className+' ') > 0 || n.indexOf(' ' +className) + (' ' +className).length == n.length){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
