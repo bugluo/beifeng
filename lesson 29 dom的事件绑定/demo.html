@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件监听</title>
+</head>
+<body>
+
+
+	<!-- <div id="a" style="width:300px;height:300px;background:red"></div> -->
+<!-- 	<div>
+  <p>Click Me</p>
+</div> -->
+	<div id="abcdef">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<p>6</p>
+		<p>7</p>
+		<p>8</p>
+		<p>9</p>
+		<p>10</p>
+		<p>11</p>
+		<div class="abcee"></div>
+	</div>
+	<a href="http://www.baidu.com" id="a">baidu</a>
+	<script>
+
+	//事件的基本方法
+	// 	function abc(){
+	// 		alert(1);
+	// 	}
+	// 	// document.getElementById('a').onclick = abc;
+	// document.getElementById('a').addEventListener('click',function(){
+	// 	abc();
+	// },false)
+	// setTimeout(function(){
+	// 	var event = new Event('click');
+	// 	document.getElementById('a').dispatchEvent(event);
+	// },2000)
+
+	// 事件的触发阶段
+
+	// var phases = {
+	//   1: 'capture',
+	//   2: 'target',
+	//   3: 'bubble'
+	// };
+
+	var div = document.querySelector('div');
+	var p = document.querySelector('p');
+
+	div.addEventListener('click', callback, true);
+	// p.addEventListener('click', callback, true);
+	div.addEventListener('click', callback, false);
+	// p.addEventListener('click', callback, false);
+
+	function callback(event) {
+
+	  var tag = event.currentTarget.tagName;
+	  // var phase = phases[event.eventPhase];
+	  console.log(tag,event.target.tagName);
+	  // console.log("Tag: '" + tag + "'. EventPhase: '" + phase + "'");
+	}
+
+	//事件绑定
+
+	// document.getElementById('abcdef').addEventListener('click',function(event){
+	// 	console.log(event);
+	// },false)
+	// document.querySelector('p').addEventListener('click',function(event){
+	// 	event.stopPropagation();
+	// },false)
+
+	//自定义event
+	// var ev = new Event("look", {"bubbles":true, "cancelable":false});
+	// document.dispatchEvent(ev);
+
+
+	// document.getElementById('a').onclick = function(event){
+	// 	event.preventDefault();
+	// 	console.log(event.defaultPrevented);
+	// }
+	</script>
+</body>
+</html>
