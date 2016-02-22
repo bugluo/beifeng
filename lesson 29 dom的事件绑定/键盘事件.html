@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input id="abc" type="text">
+	<script>
+		document.getElementById('abc').addEventListener('keypress',function(){
+			console.log('keypress');
+		},false)
+		document.getElementById('abc').addEventListener('keydown',function(e){
+			console.log('keydown');
+			// if(e.keyCode <48 || e.keyCode > 57){
+			// 	e.preventDefault();
+			// 	e.stopPropagation();
+			// }
+		},false)
+		document.getElementById('abc').addEventListener('change',function(){
+			console.log('change');
+		},false)
+	</script>
+</body>
+</html>

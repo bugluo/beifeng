@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	html,body{
+		min-height: 100%;
+		height:100%;
+		margin:0;
+	}
+	body{
+		overflow: hidden;
+	}
+	div{
+		height:100%;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div style="background:blue;"></div>
+	<div style="background:gray;"></div>
+	<div style="background:white;"></div>
+	<script>
+	window.onload = function(){
+		var page = 0;
+		var flag = true;
+		var docHeight = document.documentElement.clientHeight;
+		function up(){
+			if(page == 0){
+				return;
+			}
+			page --;
+			window.scrollTo(0,(page) * docHeight);
+		}
+		function down(){
+			if(page == 3){
+				return;
+			}
+			page ++;
+			window.scrollTo(0,(page) * docHeight);
+		}
+		document.addEventListener('wheel',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			if(flag){
+				flag = false;
+				if(e.wheelDeltaY>0){
+					down();
+				}else if(e.wheelDeltaY<0){
+					up();
+				}
+				setTimeout(function(){
+					flag = true;
+				},1000)
+			}
+			
+		},false)
+		
+	}
+	</script>
+</body>
+</html>

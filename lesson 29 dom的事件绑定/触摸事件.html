@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.abcd{
+		transition:0.3s all;
+		transform: translate3d(0,0,0);
+	}
+	.abcd>div{
+		height:100%;
+	}
+	</style>
+</head>
+<body>
+	<div class="abcd" id="body">
+		<div style="background:red"></div>
+		<div style="background:orange"></div>
+		<div style="background:black"></div>
+		<div style="background:yellow"></div>
+		<div style="background:gray"></div>
+	</div>
+	<script>
+	var h = window.screen.height;
+	document.getElementById('body').style.height = document.getElementById('body').children.length * h + 'px';
+	for(var i = 0;i<document.getElementById('body').children.length;i++){
+		document.getElementById('body').children[i].style.height = h + 'px';
+	}
+	var touchmove = function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		console.log('touchmove');
+		yn = e.touches[0].clientY;
+	};
+	var flag = 0;
+	function up(){
+		if(flag == 0){
+			return;
+		}
+		flag --;
+		document.getElementById('body').style.transform = 'translate3d(0,'+(flag * h)+'px,0)';
+	}
+	function down(){
+		if(flag == document.getElementById('body').children.length){
+			return;
+		}
+		flag ++;
+		document.getElementById('body').style.transform = 'translate3d(0,'+(flag * h)+'px,0)';
+	}
+	var touchend = function(e){
+		console.log('touchend');
+		// debugger;
+		if(yn - y > 50){
+			down();
+			
+		}else if(yn - y < -50){
+			up();
+		}
+		document.getElementById('body').removeEventListener('touchmove',touchmove);
+		document.getElementById('body').removeEventListener('touchend',touchend);
+	};
+	var y = 0;
+	var yn = 0;
+	document.getElementById('body').addEventListener('touchstart',function(e){
+		y = e.touches[0].clientY;
+		console.log('touchstart');
+		document.getElementById('body').addEventListener('touchmove',touchmove,false)
+		document.getElementById('body').addEventListener('touchend',touchend,false)
+	},false)
+	
+	
+	</script>
+	
+</body>
+</html>

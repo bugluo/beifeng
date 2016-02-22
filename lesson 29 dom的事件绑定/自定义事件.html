@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="abcd" style="width:200px;height:200px;background:red;"></div>
+	<script>
+
+
+		window.onload = function(){
+			document.getElementById('abcd').addEventListener('click',function(){
+				alert('不要点我');
+			},false)
+
+			var clickabcd = new MouseEvent('click');
+			document.getElementById('abcd').dispatchEvent(clickabcd);
+		}
+		
+
+		// (function(){
+		// 	document.addEventListener('look',function(e){
+		// 		console.log(e);
+		// 		alert('看你妹啊看');
+		// 	},false);
+
+		// })()
+
+
+		//ie下使用
+		// (function () {
+		//   function CustomEvent ( event, params ) {
+		//     params = params || { bubbles: false, cancelable: false, detail: undefined };
+		//     var evt = document.createEvent( 'CustomEvent' );
+		//     evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+		//     return evt;
+		//    }
+
+		//   CustomEvent.prototype = window.Event.prototype;
+
+		//   window.CustomEvent = CustomEvent;
+		// })();
+		
+		// var event = new Event('look');
+		// document.dispatchEvent(event);
+
+		// var event1 = new Event('look');
+		// document.dispatchEvent(event1);
+
+		// var paramEvent = new CustomEvent('look',{detail:{a:1}});
+		// document.dispatchEvent(paramEvent);
+
+	</script>
+</body>
+</html>

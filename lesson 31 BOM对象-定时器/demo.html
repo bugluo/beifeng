@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<div id="test"></div>
+<input type="text" id="a">
+<body>
+	<script>
+	// console.log(1);
+	// setTimeout('console.log(2)',1000);
+	// console.log(3);
+
+	// function plus(a,b){
+	// 	console.log(a+b);
+	// }
+	// setTimeout(function(){
+	// 	plus(1,2);
+	// },100)
+
+	// var x = 1;
+
+	// var o = {
+	//   x: 2,
+	//   y: function(){
+	//     console.log(this.x);
+	//   }
+	// };
+	// o.y();
+	// setTimeout(o.y,1000);
+
+	// function User(login) {
+	//   this.login = login;
+	//   var self = this;
+	//   this.sayHi = function() {
+	//     console.log(this.login);
+	//   }
+	// }
+
+	// var user = new User('John');
+
+	// setTimeout(user.sayHi.bind(user), 1000);
+
+	// var n = 0;
+	// var interval = setInterval(function(){
+	// 	n++;
+	// 	console.log(interval);
+	// 	if(n == 10){
+	// 		clearInterval(interval);
+	// 		clearInterval(2);
+	// 	}
+	// 	document.getElementById('test').innerHTML = n;
+
+	// },500)
+	// setInterval(function(){
+	// 	console.log('test');
+	// },10)
+	// 	console.log(0);
+
+	// setTimeout(function(){
+	// 	console.log(1);
+	// },0)
+	// 	console.log(2);
+	document.getElementById('a').onkeypress = function(event) {
+		// console.log( this.value.toUpperCase());
+	 //  this.value = this.value.toUpperCase();
+	 var self = this;
+	  setTimeout(function() {
+	    self.value = self.value.toUpperCase();
+	  }, 0);
+	}
+	</script>
+</body>
+</html>

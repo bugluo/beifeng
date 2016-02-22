@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;}</style>
+</head>
+<body>
+	<div id="abcd" style="width:300px;height:300px;background:red;position:absolute;">
+	</div>
+
+	<div id="abcde" style="width:100px;height:100px;background:blue;position:absolute;">
+	</div>
+
+	<script>
+	window.onload = function(){
+
+
+		// var abcd = document.getElementById('abcd');
+
+		function move(abcd){
+			var newx,newy;
+			var mouseup = function(){
+				// console.log('remove');
+				document.removeEventListener('mousemove',mousemove);
+				document.removeEventListener('mouseup',mouseup);
+			};
+			var mousemove = function(e){
+					// console.log(e);
+					abcd.style.left = e.clientX - newx + 'px';
+					abcd.style.top = e.clientY - newy + 'px';
+				}
+			
+			abcd.addEventListener('mousedown',function(e){
+				// console.log(e);
+				newx = e.offsetX;
+				newy = e.offsetY;
+				document.addEventListener('mouseup',mouseup,false)
+				document.addEventListener('mousemove',mousemove,false)
+			},false)
+		}
+		
+		move(document.getElementById('abcd'));
+		move(document.getElementById('abcde'));
+		
+		// abcd.addEventListener('click',function(){
+		// 	console.log('click');
+		// },false)
+		// abcd.addEventListener('dblclick',function(){
+		// 	console.log('dblclick');
+		// },false)
+	}
+
+	//拖动这个div
+
+
+	//双击的时候不要触发单击
+	</script>
+</body>
+</html>

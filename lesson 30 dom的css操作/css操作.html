@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.abc:before{
+		content:"test";
+		color:red;
+	}
+	.def:before{
+		content:"tt";
+		color:black;
+	}
+	#a{
+		/*transition: all 1s;*/
+	}
+	.abc{
+		width:500px;height:500px;background-color:red;
+	}
+	/*.def{
+		width:200px;height:200px;background-color:gray;
+
+	}*/
+	@keyframe test{
+	10%{
+		width:100px;
+	}
+	100%{
+		width:200px;
+	}
+}
+#a{
+	animation: test 1s;
+}
+	</style>
+</head>
+<body>
+	<div id="a" class="abc" >
+		
+	</div>
+</body>
+	<script>
+	window.onload = function(){
+		// document.getElementById('a').setAttribute('style','background:gray;width:500px;height:500px');
+
+		// document.getElementById('a').style.backgroundColor = 'gray';
+		// document.getElementById('a').style["background-color"] = 'gray';
+		// document.getElementById('a').style.cssText = 'background-color:gray;width:500px;height:500px;'
+
+		// console.log(typeof document.getElementById('a').style.webkitAnimation);
+
+		// //伪元素
+		// console.log(window.getComputedStyle(document.getElementById('a'), ':before').color);
+		// setTimeout(function(){
+		// 	document.getElementById('a').className = 'def';
+
+		// },2000)
+
+		// console.log(document.styleSheets[1].disabeld = true);
+
+
+		// var linkElm = document.createElement('link');
+		// linkElm.setAttribute('rel', 'stylesheet');
+		// linkElm.setAttribute('type', 'text/css');
+		// linkElm.setAttribute('href', 'css.css');
+
+		// document.head.appendChild(linkElm);
+
+		// window.onresize = function(){
+		// 	console.log(document.documentElement.offsetWidth)
+		// }
+
+		var result = window.matchMedia("(max-width: 700px)");
+		result.addListener(function(){
+			if (result.matches) {
+			  console.log('页面宽度小于等于700px');
+			} else {
+			  console.log('页面宽度大于700px');
+			}
+		})
+		
+		var el = document.getElementById('a');
+		el.addEventListener('webkitTransitionEnd', function(e){
+		  console.log(e);
+		});
+		// setTimeout(function(){
+		// 	document.getElementById('a').className = 'def';
+		// },1000)
+	}
+	</script>
+</html>
