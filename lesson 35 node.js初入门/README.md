@@ -40,13 +40,20 @@ REPL(read–eval–print loop) 应该就出来了，那我们就成功了。
 
 ### 《一个最简单的 express 应用》
 
+#### 什么是express
+
+基于 Node.js 平台，快速、开放、极简的 web 开发框架。
+学习这个有什么用？
+框架帮我们完成一些重复的东西，约定一些有用的东西。
+只是在它之上扩展了 Web 应用所需的基本功能。
+
 #### 目标
 
 建立一个 lesson1 项目，在其中编写代码。当在浏览器中访问 `http://localhost:3000/` 时，输出 `Hello World`。
 
 #### 挑战
 
-访问 `http://localhost:3000/` 时，输出 `你好，世界`。
+访问 `http://localhost:3000/` 时，输出 `Hello World`。
 
 #### 知识点
 
