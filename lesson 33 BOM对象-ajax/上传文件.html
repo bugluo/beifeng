@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- <form method="post" target="iframe" action="http://www.baidu.com"> -->
+	<input type="file">
+	<button>上传</button>
+<!-- </form> -->
+
+
+	<script>
+	function uploadFiles(url, files) {
+	  var formData = new FormData();
+
+	  for (var i = 0, file; file = files[i]; ++i) {
+	    formData.append(file.name, file); // 可加入第三个参数，表示文件名
+	  }
+
+	  var xhr = new XMLHttpRequest();
+	  xhr.open('POST', url, true);
+	  xhr.onload = function(e) { 
+	  	console.log(e);
+	   };
+
+	  xhr.upload.onprogress = function(e){
+	  	console.log(e);
+	  }
+	  xhr.send(formData);  // multipart/form-data
+	}
+
+
+	document.querySelector('input[type="file"]').addEventListener('change', function(e) {
+	  uploadFiles('http://www.baidu.com', this.files);
+	}, false);	
+
+	</script>
+</body>
+</html>

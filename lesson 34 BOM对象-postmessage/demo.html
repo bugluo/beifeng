@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <iframe src="http://172.20.10.3:8000/iframe.html" frameborder="0"></iframe> -->
+
+	<script>
+		var  popup;
+		window.onload =function(){
+			popup = window.open('http://172.20.10.3:8000/iframe.html');
+			popup.postMessage('abc','http://172.20.10.3:8000');
+
+		}
+		window.onmessage = function(event){
+			console.log(event);
+		}
+
+	</script>
+</body>
+</html>

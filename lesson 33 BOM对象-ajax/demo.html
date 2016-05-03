@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="abc"></div>
+	<script>
+	// 新建一个XMLHttpRequest实例对象
+	var xhr = new XMLHttpRequest();
+
+	// 指定通信过程中状态改变时的回调函数
+	xhr.onreadystatechange = function(){
+	  // 通信成功时，状态值为4
+	  if (xhr.readyState === 4){
+	    if (xhr.status === 200){
+	    	document.getElementById('abc').innerHTML = xhr.responseText;
+	      console.log(xhr.responseText);
+	    } else {
+	      console.error(xhr.statusText);
+	    }
+	  }
+	};
+
+	xhr.onerror = function (e) {
+	  console.error(xhr.statusText);
+	};
+
+	// open方式用于指定HTTP动词、请求的网址、是否异步
+	xhr.open('GET', 'http://www.sina.com.cn', true);
+
+	// 发送HTTP请求
+	xhr.send(null);
+	</script>
+</body>
+</html>

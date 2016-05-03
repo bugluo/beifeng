@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="abc"></div>
+	<script type="text/javascript">
+		var BAP = {};
+		BAP.copyJSON = function(d){
+			console.log(d);
+		}
+		function addScriptTag(src){
+		    var script = document.createElement('script');
+		    script.setAttribute("type","text/javascript");
+		    script.src = src;
+		    document.body.appendChild(script);
+		}
+		addScriptTag('http://c.betrad.com/a/n/329/65019.js');
+	</script>
+</body>
+</html>
