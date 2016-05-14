@@ -38,6 +38,10 @@ REPL(read–eval–print loop) 应该就出来了，那我们就成功了。
 比如 `> console.log(1)`
 
 
+### 装一个n
+
+nodejs有一个很坑爹的地方，版本太多太多，所以我们装一个叫n的版本控制程序
+
 ### 《一个最简单的 express 应用》
 
 #### 什么是express
