@@ -1,0 +1,17 @@
+{
+  "name": "cheeriodemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "eventproxy": "^0.3.4",
+    "express": "^4.13.4",
+    "superagent": "^2.0.0-alpha.3"
+  }
+}

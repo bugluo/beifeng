@@ -1,22 +1,16 @@
 {
-  "name": "demo2",
+  "name": "cheeriodemo",
   "version": "1.0.0",
-  "description": "md5",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "md5",
-    "express"
-  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^0.20.0",
     "express": "^4.13.4",
-    "sha1": "^1.1.1",
-    "superagent": "^1.8.3",
-    "utility": "^1.8.0"
+    "superagent": "^2.0.0-alpha.3"
   }
 }
