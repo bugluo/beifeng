@@ -21,6 +21,13 @@ redis作为内存数据库，更多使用场景是用作缓存。
 <a href="http://www.cnblogs.com/macro-cheng/archive/2011/10/25/mysql-001.html" target="_blank">mac mysql 安装</a>
 <a href="http://www.sequelpro.com/" target="_blank">客户端工具 sequel pro</a>
 
+##### 关系型数据库的基本概念
+
+数据库,从名字上来讲就是一个用来放数据的库,
+表嘛.就是你平常在生活中的表一样,比如excel的表一样
+列嘛,也就是字段,就是一行东西只能放一种类型的数据,
+行嘛,一行也就是记录,放着每个字段(列)对应的值
+
 ##### 基本语法
 
 1 说明：创建数据库 
@@ -192,11 +199,44 @@ TRUNCATE TABLE table1
 select top 5 * from (select top 15 * from table order by id asc) table_别名 order by 
 id desc 
 
+##### nodejs 与 mysql
 
-2. mongodb
+安装mysql连接module，npm install mysql
 
-```javascript
-brew install mongodb
-mongod --config /usr/local/etc/mongod.conf
+##### 普通连接方式
+```javascript 
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'secret',
+  database : 'my_db'
+});
+
+connection.connect();
+
+connection.query('select  * from solution', function(err, rows, fields) {
+  if (err) throw err;
+    console.log('The solution is: ', rows);
+});
+
+connection.end();
 ```
 
+
+##### 连接池
+```javascript
+var mysql = require('mysql');
+var pool  = mysql.createPool({
+  connectionLimit : 10,
+  host            : 'example.org',
+  user            : 'bob',
+  password    : 'secret'
+});
+
+pool.query('select  * from solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows);
+});
+```
