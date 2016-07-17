@@ -2,7 +2,8 @@
 
 ## 数据库的分类
 1. 关系型数据库 MySql
-3. 非关系型数据库 Redis MongoDB
+2. KV数据库 Redis
+3. 非关系型数据库 MongoDB
 
 ### 不同数据库的差异
 
@@ -292,7 +293,11 @@ pool.query('select  * from solution', function(err, rows, fields) {
 
 #### redis 安装 使用
 
-brew redis
+  <a href="http://redis.io/download">redis下载</a>
+
+  或者brew redis
+
+  redis-cli /usr/local/etc/redis.conf
 
 
 ##### redis 基本操作
