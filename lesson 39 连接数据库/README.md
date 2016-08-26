@@ -1,8 +1,8 @@
 # 连接数据库
 
 ## 数据库的分类
-1. 关系型数据库 MySql
-2. KV数据库 Redis
+1. 关系型数据库 MySql oracle db2
+2. KV数据库 Redis memcached
 3. 非关系型数据库 MongoDB
 
 ### 不同数据库的差异
@@ -288,6 +288,47 @@ pool.query('select  * from solution', function(err, rows, fields) {
 
   console.log('The solution is: ', rows);
 });
+```
+
+##### 实例演练
+```javascript
+用户登陆
+var express = require('express');
+var mysql = require('mysql');
+var md5 = require('md5');
+var app = express();
+
+app.listen(3000, function () {
+  console.log('app is listening at port 3000');
+});
+
+var pool  = mysql.createPool({
+  connectionLimit : 10,
+  host            : '127.0.0.1',
+  user            : 'root',
+  password    : ''
+});
+
+
+注册
+app.get('/register', function (req, res) {
+  var username = req.query.username;
+  var password = md5(req.query.password);
+  pool.query('insert into user(username,password) values('+ username +','+ password +') ', function(err, rows, fields) {
+    if (err) throw err;
+
+    console.log('The solution is: ', rows);
+  });
+});
+
+登陆
+app.get('/login', function (req, res) {
+  pool.query('select  * from user', function(err, rows, fields) {
+    if (err) throw err;
+    console.log('The solution is: ', rows, fields);
+  });
+}); 
+
 ```
 
 
