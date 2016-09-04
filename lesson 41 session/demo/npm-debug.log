@@ -1,0 +1,1511 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'hiredis',
+1 verbose cli   'redis',
+1 verbose cli   '--save' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/package.json
+5 warn package.json session@1.0.0 No description
+6 warn package.json session@1.0.0 No repository field.
+7 warn package.json session@1.0.0 No README data
+8 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/package.json
+9 silly cache add args [ 'hiredis', null ]
+10 verbose cache add spec hiredis
+11 silly cache add args [ 'redis', null ]
+12 verbose cache add spec redis
+13 silly cache add parsed spec Result {
+13 silly cache add   raw: 'hiredis',
+13 silly cache add   scope: null,
+13 silly cache add   name: 'hiredis',
+13 silly cache add   rawSpec: '',
+13 silly cache add   spec: 'latest',
+13 silly cache add   type: 'tag' }
+14 silly addNamed hiredis@latest
+15 verbose addNamed "latest" is being treated as a dist-tag for hiredis
+16 info addNameTag [ 'hiredis', 'latest' ]
+17 silly mapToRegistry name hiredis
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry http://registry.npmjs.org/
+20 silly mapToRegistry data Result {
+20 silly mapToRegistry   raw: 'hiredis',
+20 silly mapToRegistry   scope: null,
+20 silly mapToRegistry   name: 'hiredis',
+20 silly mapToRegistry   rawSpec: '',
+20 silly mapToRegistry   spec: 'latest',
+20 silly mapToRegistry   type: 'tag' }
+21 silly mapToRegistry uri http://registry.npmjs.org/hiredis
+22 verbose addNameTag registry:http://registry.npmjs.org/hiredis not in flight; fetching
+23 silly cache add parsed spec Result {
+23 silly cache add   raw: 'redis',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'redis',
+23 silly cache add   rawSpec: '',
+23 silly cache add   spec: 'latest',
+23 silly cache add   type: 'tag' }
+24 silly addNamed redis@latest
+25 verbose addNamed "latest" is being treated as a dist-tag for redis
+26 info addNameTag [ 'redis', 'latest' ]
+27 silly mapToRegistry name redis
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry http://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'redis',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   name: 'redis',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri http://registry.npmjs.org/redis
+32 verbose addNameTag registry:http://registry.npmjs.org/redis not in flight; fetching
+33 verbose request uri http://registry.npmjs.org/hiredis
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 22:49:01
+36 verbose request id 63233bf86b214786
+37 http request GET http://registry.npmjs.org/hiredis
+38 verbose request uri http://registry.npmjs.org/redis
+39 verbose request no auth needed
+40 info attempt registry request try #1 at 22:49:01
+41 http request GET http://registry.npmjs.org/redis
+42 http 200 http://registry.npmjs.org/redis
+43 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+43 verbose headers   etag: '"19RK6WYG8RKMT22C85TOXB2QO"',
+43 verbose headers   'content-type': 'application/json',
+43 verbose headers   'content-encoding': 'gzip',
+43 verbose headers   'cache-control': 'max-age=300',
+43 verbose headers   'content-length': '28504',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Sun, 28 Aug 2016 14:47:26 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   age: '282',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+43 verbose headers   'x-cache': 'HIT',
+43 verbose headers   'x-cache-hits': '1',
+43 verbose headers   'x-timer': 'S1472395646.257413,VS0,VE0',
+43 verbose headers   vary: 'Accept-Encoding' }
+44 silly get cb [ 200,
+44 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+44 silly get     etag: '"19RK6WYG8RKMT22C85TOXB2QO"',
+44 silly get     'content-type': 'application/json',
+44 silly get     'content-encoding': 'gzip',
+44 silly get     'cache-control': 'max-age=300',
+44 silly get     'content-length': '28504',
+44 silly get     'accept-ranges': 'bytes',
+44 silly get     date: 'Sun, 28 Aug 2016 14:47:26 GMT',
+44 silly get     via: '1.1 varnish',
+44 silly get     age: '282',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-served-by': 'cache-lcy1123-LCY',
+44 silly get     'x-cache': 'HIT',
+44 silly get     'x-cache-hits': '1',
+44 silly get     'x-timer': 'S1472395646.257413,VS0,VE0',
+44 silly get     vary: 'Accept-Encoding' } ]
+45 verbose get saving redis to /Users/liuxinyu/.npm/registry.npmjs.org/redis/.cache.json
+46 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+47 silly addNameTag next cb for redis with tag latest
+48 silly addNamed redis@2.6.2
+49 verbose addNamed "2.6.2" is a plain semver version for redis
+50 silly mapToRegistry name redis
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry http://registry.npmjs.org/
+53 silly mapToRegistry data Result {
+53 silly mapToRegistry   raw: 'redis',
+53 silly mapToRegistry   scope: null,
+53 silly mapToRegistry   name: 'redis',
+53 silly mapToRegistry   rawSpec: '',
+53 silly mapToRegistry   spec: 'latest',
+53 silly mapToRegistry   type: 'tag' }
+54 silly mapToRegistry uri http://registry.npmjs.org/redis
+55 verbose addRemoteTarball http://registry.npmjs.org/redis/-/redis-2.6.2.tgz not in flight; adding
+56 verbose addRemoteTarball [ 'http://registry.npmjs.org/redis/-/redis-2.6.2.tgz',
+56 verbose addRemoteTarball   '7ccab0563013ac619e7dd84c6512b81d3d852579' ]
+57 info retry fetch attempt 1 at 22:49:03
+58 info attempt registry request try #1 at 22:49:03
+59 http fetch GET http://registry.npmjs.org/redis/-/redis-2.6.2.tgz
+60 http 200 http://registry.npmjs.org/hiredis
+61 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+61 verbose headers   etag: '"9YU1XAV9AH1YH7OBHI8CICMO4"',
+61 verbose headers   'content-type': 'application/json',
+61 verbose headers   'content-encoding': 'gzip',
+61 verbose headers   'cache-control': 'max-age=300',
+61 verbose headers   'content-length': '4653',
+61 verbose headers   'accept-ranges': 'bytes',
+61 verbose headers   date: 'Sun, 28 Aug 2016 14:47:26 GMT',
+61 verbose headers   via: '1.1 varnish',
+61 verbose headers   age: '107',
+61 verbose headers   connection: 'keep-alive',
+61 verbose headers   'x-served-by': 'cache-lcy1125-LCY',
+61 verbose headers   'x-cache': 'HIT',
+61 verbose headers   'x-cache-hits': '1',
+61 verbose headers   'x-timer': 'S1472395646.242527,VS0,VE0',
+61 verbose headers   vary: 'Accept-Encoding' }
+62 silly get cb [ 200,
+62 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+62 silly get     etag: '"9YU1XAV9AH1YH7OBHI8CICMO4"',
+62 silly get     'content-type': 'application/json',
+62 silly get     'content-encoding': 'gzip',
+62 silly get     'cache-control': 'max-age=300',
+62 silly get     'content-length': '4653',
+62 silly get     'accept-ranges': 'bytes',
+62 silly get     date: 'Sun, 28 Aug 2016 14:47:26 GMT',
+62 silly get     via: '1.1 varnish',
+62 silly get     age: '107',
+62 silly get     connection: 'keep-alive',
+62 silly get     'x-served-by': 'cache-lcy1125-LCY',
+62 silly get     'x-cache': 'HIT',
+62 silly get     'x-cache-hits': '1',
+62 silly get     'x-timer': 'S1472395646.242527,VS0,VE0',
+62 silly get     vary: 'Accept-Encoding' } ]
+63 verbose get saving hiredis to /Users/liuxinyu/.npm/registry.npmjs.org/hiredis/.cache.json
+64 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+65 silly addNameTag next cb for hiredis with tag latest
+66 silly addNamed hiredis@0.5.0
+67 verbose addNamed "0.5.0" is a plain semver version for hiredis
+68 silly mapToRegistry name hiredis
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry http://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'hiredis',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   name: 'hiredis',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri http://registry.npmjs.org/hiredis
+73 verbose addRemoteTarball http://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz not in flight; adding
+74 verbose addRemoteTarball [ 'http://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz',
+74 verbose addRemoteTarball   'db03a98becd7003d13c260043aceecfacdf59b87' ]
+75 info retry fetch attempt 1 at 22:49:03
+76 info attempt registry request try #1 at 22:49:03
+77 http fetch GET http://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz
+78 http fetch 200 http://registry.npmjs.org/redis/-/redis-2.6.2.tgz
+79 http fetch 200 http://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz
+80 silly fetchAndShaCheck shasum db03a98becd7003d13c260043aceecfacdf59b87
+81 verbose addTmpTarball /var/folders/54/kgynt5hn365_5zqqy9_flm3h0000gn/T/npm-65128-f5055768/registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz not in flight; adding
+82 verbose addTmpTarball already have metadata; skipping unpack for hiredis@0.5.0
+83 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+84 silly cache afterAdd hiredis@0.5.0
+85 verbose afterAdd /Users/liuxinyu/.npm/hiredis/0.5.0/package/package.json not in flight; writing
+86 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+87 verbose afterAdd /Users/liuxinyu/.npm/hiredis/0.5.0/package/package.json written
+88 silly fetchAndShaCheck shasum 7ccab0563013ac619e7dd84c6512b81d3d852579
+89 verbose addTmpTarball /var/folders/54/kgynt5hn365_5zqqy9_flm3h0000gn/T/npm-65128-f5055768/registry.npmjs.org/redis/-/redis-2.6.2.tgz not in flight; adding
+90 verbose addTmpTarball already have metadata; skipping unpack for redis@2.6.2
+91 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+92 silly cache afterAdd redis@2.6.2
+93 verbose afterAdd /Users/liuxinyu/.npm/redis/2.6.2/package/package.json not in flight; writing
+94 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+95 verbose afterAdd /Users/liuxinyu/.npm/redis/2.6.2/package/package.json written
+96 silly install resolved [ { name: 'hiredis',
+96 silly install resolved     description: 'Wrapper for reply processing code in hiredis',
+96 silly install resolved     version: '0.5.0',
+96 silly install resolved     homepage: 'http://github.com/redis/hiredis-node',
+96 silly install resolved     author: { name: 'Jan-Erik Rediger', email: 'janerik@fnordig.de' },
+96 silly install resolved     contributors: [ [Object] ],
+96 silly install resolved     main: 'hiredis',
+96 silly install resolved     scripts:
+96 silly install resolved      { test: 'node test/reader.js && node test/writer.js',
+96 silly install resolved        install: 'node-gyp rebuild' },
+96 silly install resolved     dependencies: { bindings: '^1.2.1', nan: '^2.3.4' },
+96 silly install resolved     engines: { node: '>= 0.10.0' },
+96 silly install resolved     repository:
+96 silly install resolved      { type: 'git',
+96 silly install resolved        url: 'git+https://github.com/redis/hiredis-node.git' },
+96 silly install resolved     bugs: { url: 'https://github.com/redis/hiredis-node/issues' },
+96 silly install resolved     license: 'BSD-3-Clause',
+96 silly install resolved     gypfile: true,
+96 silly install resolved     gitHead: 'b8f3af63704176a323afed2a0e9bb4811d201bc1',
+96 silly install resolved     _id: 'hiredis@0.5.0',
+96 silly install resolved     _shasum: 'db03a98becd7003d13c260043aceecfacdf59b87',
+96 silly install resolved     _from: 'hiredis@latest',
+96 silly install resolved     _npmVersion: '3.9.5',
+96 silly install resolved     _nodeVersion: '6.2.1',
+96 silly install resolved     _npmUser: { name: 'badboy_', email: 'janerik@fnordig.de' },
+96 silly install resolved     maintainers: [ [Object], [Object] ],
+96 silly install resolved     dist:
+96 silly install resolved      { shasum: 'db03a98becd7003d13c260043aceecfacdf59b87',
+96 silly install resolved        tarball: 'https://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz' },
+96 silly install resolved     _npmOperationalInternal:
+96 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+96 silly install resolved        tmp: 'tmp/hiredis-0.5.0.tgz_1465640985712_0.8231057613156736' },
+96 silly install resolved     directories: {},
+96 silly install resolved     _resolved: 'http://registry.npmjs.org/hiredis/-/hiredis-0.5.0.tgz' },
+96 silly install resolved   { name: 'redis',
+96 silly install resolved     version: '2.6.2',
+96 silly install resolved     description: 'Redis client library',
+96 silly install resolved     keywords:
+96 silly install resolved      [ 'database',
+96 silly install resolved        'redis',
+96 silly install resolved        'transaction',
+96 silly install resolved        'pipelining',
+96 silly install resolved        'performance',
+96 silly install resolved        'queue',
+96 silly install resolved        'nodejs',
+96 silly install resolved        'pubsub',
+96 silly install resolved        'backpressure' ],
+96 silly install resolved     author: { name: 'Matt Ranney', email: 'mjr@ranney.com' },
+96 silly install resolved     license: 'MIT',
+96 silly install resolved     main: './index.js',
+96 silly install resolved     scripts:
+96 silly install resolved      { coveralls: 'nyc report --reporter=text-lcov | coveralls',
+96 silly install resolved        coverage: 'nyc report --reporter=html',
+96 silly install resolved        benchmark: 'node benchmarks/multi_bench.js',
+96 silly install resolved        test: 'nyc --cache mocha ./test/*.js ./test/commands/*.js --timeout=8000',
+96 silly install resolved        posttest: 'eslint . --fix && npm run coverage',
+96 silly install resolved        compare: 'node benchmarks/diff_multi_bench_output.js beforeBench.txt afterBench.txt' },
+96 silly install resolved     dependencies:
+96 silly install resolved      { 'double-ended-queue': '^2.1.0-0',
+96 silly install resolved        'redis-commands': '^1.2.0',
+96 silly install resolved        'redis-parser': '^2.0.0' },
+96 silly install resolved     engines: { node: '>=0.10.0' },
+96 silly install resolved     devDependencies:
+96 silly install resolved      { bluebird: '^3.0.2',
+96 silly install resolved        coveralls: '^2.11.2',
+96 silly install resolved        'intercept-stdout': '~0.1.2',
+96 silly install resolved        eslint: '^2.5.0',
+96 silly install resolved        metrics: '^0.1.9',
+96 silly install resolved        mocha: '^2.3.2',
+96 silly install resolved        nyc: '^6.0.0',
+96 silly install resolved        'tcp-port-used': '^0.1.2',
+96 silly install resolved        uuid: '^2.0.1',
+96 silly install resolved        'win-spawn': '^2.0.0' },
+96 silly install resolved     repository:
+96 silly install resolved      { type: 'git',
+96 silly install resolved        url: 'git://github.com/NodeRedis/node_redis.git' },
+96 silly install resolved     bugs: { url: 'https://github.com/NodeRedis/node_redis/issues' },
+96 silly install resolved     homepage: 'https://github.com/NodeRedis/node_redis',
+96 silly install resolved     directories: { example: 'examples', test: 'test' },
+96 silly install resolved     gitHead: '98688331a308b1f6fdc6f3913cb351cd00421054',
+96 silly install resolved     _id: 'redis@2.6.2',
+96 silly install resolved     _shasum: '7ccab0563013ac619e7dd84c6512b81d3d852579',
+96 silly install resolved     _from: 'redis@latest',
+96 silly install resolved     _npmVersion: '2.15.5',
+96 silly install resolved     _nodeVersion: '4.4.5',
+96 silly install resolved     _npmUser: { name: 'bridgear', email: 'ruben@bridgewater.de' },
+96 silly install resolved     dist:
+96 silly install resolved      { shasum: '7ccab0563013ac619e7dd84c6512b81d3d852579',
+96 silly install resolved        tarball: 'https://registry.npmjs.org/redis/-/redis-2.6.2.tgz' },
+96 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+96 silly install resolved     _npmOperationalInternal:
+96 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+96 silly install resolved        tmp: 'tmp/redis-2.6.2.tgz_1466073086143_0.7477472294121981' },
+96 silly install resolved     _resolved: 'http://registry.npmjs.org/redis/-/redis-2.6.2.tgz' } ]
+97 info install hiredis@0.5.0 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+98 info install redis@2.6.2 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+99 info installOne hiredis@0.5.0
+100 verbose installOne of hiredis to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo not in flight; installing
+101 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+102 info installOne redis@2.6.2
+103 verbose installOne of redis to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo not in flight; installing
+104 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir already in flight; waiting
+105 verbose lock using /Users/liuxinyu/.npm/_locks/hiredis-296809a4cc69e292.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+106 verbose lock using /Users/liuxinyu/.npm/_locks/redis-ada794b22b612e49.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+107 silly install write writing hiredis 0.5.0 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+108 silly install write writing redis 2.6.2 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+109 verbose unbuild node_modules/hiredis
+110 verbose unbuild node_modules/redis
+111 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+112 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+113 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+114 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+115 verbose tar unpack /Users/liuxinyu/.npm/hiredis/0.5.0/package.tgz
+116 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+117 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis is being purged
+118 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+119 verbose tar unpack /Users/liuxinyu/.npm/redis/2.6.2/package.tgz
+120 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+121 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis is being purged
+122 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+123 silly gunzTarPerm modes [ '755', '644' ]
+124 silly gunzTarPerm modes [ '755', '644' ]
+125 silly gunzTarPerm extractEntry package.json
+126 silly gunzTarPerm extractEntry package.json
+127 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+128 silly gunzTarPerm extractEntry .npmignore
+129 silly gunzTarPerm extractEntry README.md
+130 silly gunzTarPerm extractEntry .npmignore
+131 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+132 silly gunzTarPerm extractEntry README.md
+133 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+134 silly gunzTarPerm extractEntry bench.js
+135 silly gunzTarPerm extractEntry hiredis.js
+136 silly gunzTarPerm extractEntry LICENSE
+137 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+138 silly gunzTarPerm extractEntry COPYING
+139 silly gunzTarPerm extractEntry Makefile
+140 silly gunzTarPerm extractEntry index.js
+141 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+142 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
+143 silly gunzTarPerm modified mode [ '.github/ISSUE_TEMPLATE.md', 436, 420 ]
+144 silly gunzTarPerm extractEntry .github/PULL_REQUEST_TEMPLATE.md
+145 silly gunzTarPerm modified mode [ '.github/PULL_REQUEST_TEMPLATE.md', 436, 420 ]
+146 silly gunzTarPerm extractEntry .eslintrc
+147 silly gunzTarPerm modified mode [ '.eslintrc', 436, 420 ]
+148 silly gunzTarPerm extractEntry changelog.md
+149 silly gunzTarPerm modified mode [ 'changelog.md', 436, 420 ]
+150 silly gunzTarPerm extractEntry appveyor.yml
+151 silly gunzTarPerm extractEntry .gitmodules
+152 silly gunzTarPerm extractEntry .eslintignore
+153 silly gunzTarPerm modified mode [ '.eslintignore', 436, 420 ]
+154 silly gunzTarPerm extractEntry lib/command.js
+155 silly gunzTarPerm modified mode [ 'lib/command.js', 436, 420 ]
+156 silly gunzTarPerm extractEntry binding.gyp
+157 silly gunzTarPerm extractEntry lib/commands.js
+158 silly gunzTarPerm modified mode [ 'lib/commands.js', 436, 420 ]
+159 silly gunzTarPerm extractEntry lib/createClient.js
+160 silly gunzTarPerm modified mode [ 'lib/createClient.js', 436, 420 ]
+161 silly gunzTarPerm extractEntry lib/customErrors.js
+162 silly gunzTarPerm modified mode [ 'lib/customErrors.js', 436, 420 ]
+163 silly gunzTarPerm extractEntry deps/hiredis/.npmignore
+164 silly gunzTarPerm extractEntry deps/hiredis/README.md
+165 silly gunzTarPerm extractEntry lib/debug.js
+166 silly gunzTarPerm modified mode [ 'lib/debug.js', 436, 420 ]
+167 silly gunzTarPerm extractEntry lib/extendedApi.js
+168 silly gunzTarPerm modified mode [ 'lib/extendedApi.js', 436, 420 ]
+169 silly gunzTarPerm extractEntry deps/hiredis/CHANGELOG.md
+170 silly gunzTarPerm extractEntry deps/hiredis/COPYING
+171 silly gunzTarPerm extractEntry lib/individualCommands.js
+172 silly gunzTarPerm modified mode [ 'lib/individualCommands.js', 436, 420 ]
+173 silly gunzTarPerm extractEntry lib/multi.js
+174 silly gunzTarPerm modified mode [ 'lib/multi.js', 436, 420 ]
+175 silly gunzTarPerm extractEntry deps/hiredis/Makefile
+176 silly gunzTarPerm extractEntry deps/hiredis/win32.h
+177 silly gunzTarPerm extractEntry lib/utils.js
+178 silly gunzTarPerm modified mode [ 'lib/utils.js', 436, 420 ]
+179 silly gunzTarPerm extractEntry deps/hiredis/adapters/ae.h
+180 silly gunzTarPerm extractEntry deps/hiredis/adapters/glib.h
+181 silly gunzTarPerm extractEntry deps/hiredis/adapters/libev.h
+182 silly gunzTarPerm extractEntry deps/hiredis/adapters/libevent.h
+183 silly gunzTarPerm extractEntry deps/hiredis/adapters/libuv.h
+184 silly gunzTarPerm extractEntry deps/hiredis/async.c
+185 silly gunzTarPerm extractEntry deps/hiredis/async.h
+186 silly gunzTarPerm extractEntry deps/hiredis/dict.c
+187 silly gunzTarPerm extractEntry deps/hiredis/dict.h
+188 silly gunzTarPerm extractEntry deps/hiredis/.travis.yml
+189 silly gunzTarPerm extractEntry deps/hiredis/fmacros.h
+190 silly gunzTarPerm extractEntry deps/hiredis/hiredis.c
+191 silly gunzTarPerm extractEntry deps/hiredis/hiredis.h
+192 silly gunzTarPerm extractEntry deps/hiredis/net.c
+193 silly gunzTarPerm extractEntry deps/hiredis/net.h
+194 silly gunzTarPerm extractEntry deps/hiredis/read.c
+195 silly gunzTarPerm extractEntry deps/hiredis/read.h
+196 silly gunzTarPerm extractEntry deps/hiredis/sds.c
+197 silly gunzTarPerm extractEntry deps/hiredis/sds.h
+198 silly gunzTarPerm extractEntry deps/hiredis/test.c
+199 silly gunzTarPerm extractEntry deps/hiredis/examples/example-ae.c
+200 silly gunzTarPerm extractEntry deps/hiredis/examples/example-glib.c
+201 silly gunzTarPerm extractEntry deps/hiredis/examples/example-libev.c
+202 silly gunzTarPerm extractEntry deps/hiredis/examples/example-libevent.c
+203 silly gunzTarPerm extractEntry deps/hiredis/examples/example-libuv.c
+204 silly gunzTarPerm extractEntry deps/hiredis/examples/example.c
+205 silly gunzTarPerm extractEntry deps/hiredis.gyp
+206 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/package.json
+207 silly gunzTarPerm extractEntry .travis.yml
+208 silly gunzTarPerm extractEntry src/hiredis.cc
+209 silly gunzTarPerm extractEntry src/reader.cc
+210 silly gunzTarPerm extractEntry src/reader.h
+211 info preinstall redis@2.6.2
+212 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/package.json
+213 silly gunzTarPerm extractEntry CHANGELOG.md
+214 silly gunzTarPerm extractEntry test/reader.js
+215 silly prepareForInstallMany adding double-ended-queue@^2.1.0-0 from redis dependencies
+216 silly prepareForInstallMany adding redis-commands@^1.2.0 from redis dependencies
+217 silly prepareForInstallMany adding redis-parser@^2.0.0 from redis dependencies
+218 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/package.json
+219 silly gunzTarPerm extractEntry test/testlib.js
+220 silly gunzTarPerm extractEntry test/writer.js
+221 silly cache add args [ 'double-ended-queue@^2.1.0-0', null ]
+222 verbose cache add spec double-ended-queue@^2.1.0-0
+223 silly cache add args [ 'redis-commands@^1.2.0', null ]
+224 verbose cache add spec redis-commands@^1.2.0
+225 silly cache add parsed spec Result {
+225 silly cache add   raw: 'double-ended-queue@^2.1.0-0',
+225 silly cache add   scope: null,
+225 silly cache add   name: 'double-ended-queue',
+225 silly cache add   rawSpec: '^2.1.0-0',
+225 silly cache add   spec: '>=2.1.0-0 <3.0.0',
+225 silly cache add   type: 'range' }
+226 silly addNamed double-ended-queue@>=2.1.0-0 <3.0.0
+227 verbose addNamed ">=2.1.0-0 <3.0.0" is a valid semver range for double-ended-queue
+228 silly addNameRange { name: 'double-ended-queue',
+228 silly addNameRange   range: '>=2.1.0-0 <3.0.0',
+228 silly addNameRange   hasData: false }
+229 silly mapToRegistry name double-ended-queue
+230 silly mapToRegistry using default registry
+231 silly mapToRegistry registry http://registry.npmjs.org/
+232 silly mapToRegistry data Result {
+232 silly mapToRegistry   raw: 'double-ended-queue',
+232 silly mapToRegistry   scope: null,
+232 silly mapToRegistry   name: 'double-ended-queue',
+232 silly mapToRegistry   rawSpec: '',
+232 silly mapToRegistry   spec: 'latest',
+232 silly mapToRegistry   type: 'tag' }
+233 silly mapToRegistry uri http://registry.npmjs.org/double-ended-queue
+234 verbose addNameRange registry:http://registry.npmjs.org/double-ended-queue not in flight; fetching
+235 silly cache add parsed spec Result {
+235 silly cache add   raw: 'redis-commands@^1.2.0',
+235 silly cache add   scope: null,
+235 silly cache add   name: 'redis-commands',
+235 silly cache add   rawSpec: '^1.2.0',
+235 silly cache add   spec: '>=1.2.0 <2.0.0',
+235 silly cache add   type: 'range' }
+236 silly addNamed redis-commands@>=1.2.0 <2.0.0
+237 verbose addNamed ">=1.2.0 <2.0.0" is a valid semver range for redis-commands
+238 silly addNameRange { name: 'redis-commands',
+238 silly addNameRange   range: '>=1.2.0 <2.0.0',
+238 silly addNameRange   hasData: false }
+239 silly mapToRegistry name redis-commands
+240 silly mapToRegistry using default registry
+241 silly mapToRegistry registry http://registry.npmjs.org/
+242 silly mapToRegistry data Result {
+242 silly mapToRegistry   raw: 'redis-commands',
+242 silly mapToRegistry   scope: null,
+242 silly mapToRegistry   name: 'redis-commands',
+242 silly mapToRegistry   rawSpec: '',
+242 silly mapToRegistry   spec: 'latest',
+242 silly mapToRegistry   type: 'tag' }
+243 silly mapToRegistry uri http://registry.npmjs.org/redis-commands
+244 verbose addNameRange registry:http://registry.npmjs.org/redis-commands not in flight; fetching
+245 silly cache add args [ 'redis-parser@^2.0.0', null ]
+246 verbose cache add spec redis-parser@^2.0.0
+247 silly cache add parsed spec Result {
+247 silly cache add   raw: 'redis-parser@^2.0.0',
+247 silly cache add   scope: null,
+247 silly cache add   name: 'redis-parser',
+247 silly cache add   rawSpec: '^2.0.0',
+247 silly cache add   spec: '>=2.0.0 <3.0.0',
+247 silly cache add   type: 'range' }
+248 silly addNamed redis-parser@>=2.0.0 <3.0.0
+249 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for redis-parser
+250 silly addNameRange { name: 'redis-parser', range: '>=2.0.0 <3.0.0', hasData: false }
+251 silly mapToRegistry name redis-parser
+252 silly mapToRegistry using default registry
+253 silly mapToRegistry registry http://registry.npmjs.org/
+254 silly mapToRegistry data Result {
+254 silly mapToRegistry   raw: 'redis-parser',
+254 silly mapToRegistry   scope: null,
+254 silly mapToRegistry   name: 'redis-parser',
+254 silly mapToRegistry   rawSpec: '',
+254 silly mapToRegistry   spec: 'latest',
+254 silly mapToRegistry   type: 'tag' }
+255 silly mapToRegistry uri http://registry.npmjs.org/redis-parser
+256 verbose addNameRange registry:http://registry.npmjs.org/redis-parser not in flight; fetching
+257 verbose request uri http://registry.npmjs.org/double-ended-queue
+258 verbose request no auth needed
+259 info attempt registry request try #1 at 22:49:06
+260 http request GET http://registry.npmjs.org/double-ended-queue
+261 verbose request uri http://registry.npmjs.org/redis-commands
+262 verbose request no auth needed
+263 info attempt registry request try #1 at 22:49:06
+264 http request GET http://registry.npmjs.org/redis-commands
+265 verbose request uri http://registry.npmjs.org/redis-parser
+266 verbose request no auth needed
+267 info attempt registry request try #1 at 22:49:06
+268 http request GET http://registry.npmjs.org/redis-parser
+269 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/package.json
+270 info preinstall hiredis@0.5.0
+271 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/package.json
+272 silly prepareForInstallMany adding bindings@^1.2.1 from hiredis dependencies
+273 silly prepareForInstallMany adding nan@^2.3.4 from hiredis dependencies
+274 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/package.json
+275 silly cache add args [ 'nan@^2.3.4', null ]
+276 verbose cache add spec nan@^2.3.4
+277 silly cache add parsed spec Result {
+277 silly cache add   raw: 'nan@^2.3.4',
+277 silly cache add   scope: null,
+277 silly cache add   name: 'nan',
+277 silly cache add   rawSpec: '^2.3.4',
+277 silly cache add   spec: '>=2.3.4 <3.0.0',
+277 silly cache add   type: 'range' }
+278 silly addNamed nan@>=2.3.4 <3.0.0
+279 verbose addNamed ">=2.3.4 <3.0.0" is a valid semver range for nan
+280 silly addNameRange { name: 'nan', range: '>=2.3.4 <3.0.0', hasData: false }
+281 silly mapToRegistry name nan
+282 silly mapToRegistry using default registry
+283 silly mapToRegistry registry http://registry.npmjs.org/
+284 silly mapToRegistry data Result {
+284 silly mapToRegistry   raw: 'nan',
+284 silly mapToRegistry   scope: null,
+284 silly mapToRegistry   name: 'nan',
+284 silly mapToRegistry   rawSpec: '',
+284 silly mapToRegistry   spec: 'latest',
+284 silly mapToRegistry   type: 'tag' }
+285 silly mapToRegistry uri http://registry.npmjs.org/nan
+286 verbose addNameRange registry:http://registry.npmjs.org/nan not in flight; fetching
+287 silly cache add args [ 'bindings@^1.2.1', null ]
+288 verbose cache add spec bindings@^1.2.1
+289 silly cache add parsed spec Result {
+289 silly cache add   raw: 'bindings@^1.2.1',
+289 silly cache add   scope: null,
+289 silly cache add   name: 'bindings',
+289 silly cache add   rawSpec: '^1.2.1',
+289 silly cache add   spec: '>=1.2.1 <2.0.0',
+289 silly cache add   type: 'range' }
+290 silly addNamed bindings@>=1.2.1 <2.0.0
+291 verbose addNamed ">=1.2.1 <2.0.0" is a valid semver range for bindings
+292 silly addNameRange { name: 'bindings', range: '>=1.2.1 <2.0.0', hasData: false }
+293 silly mapToRegistry name bindings
+294 silly mapToRegistry using default registry
+295 silly mapToRegistry registry http://registry.npmjs.org/
+296 silly mapToRegistry data Result {
+296 silly mapToRegistry   raw: 'bindings',
+296 silly mapToRegistry   scope: null,
+296 silly mapToRegistry   name: 'bindings',
+296 silly mapToRegistry   rawSpec: '',
+296 silly mapToRegistry   spec: 'latest',
+296 silly mapToRegistry   type: 'tag' }
+297 silly mapToRegistry uri http://registry.npmjs.org/bindings
+298 verbose addNameRange registry:http://registry.npmjs.org/bindings not in flight; fetching
+299 verbose request uri http://registry.npmjs.org/nan
+300 verbose request no auth needed
+301 info attempt registry request try #1 at 22:49:06
+302 verbose etag "EGTR1APXEV7TH8V3QYT0WN357"
+303 http request GET http://registry.npmjs.org/nan
+304 verbose request uri http://registry.npmjs.org/bindings
+305 verbose request no auth needed
+306 info attempt registry request try #1 at 22:49:06
+307 verbose etag "33TX4J3DNTGF7K41ZUV6OA182"
+308 http request GET http://registry.npmjs.org/bindings
+309 http 200 http://registry.npmjs.org/double-ended-queue
+310 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+310 verbose headers   etag: '"CDPXISMR058KHR9Y4QLOJHE6R"',
+310 verbose headers   'content-type': 'application/json',
+310 verbose headers   'content-encoding': 'gzip',
+310 verbose headers   'cache-control': 'max-age=300',
+310 verbose headers   'content-length': '4192',
+310 verbose headers   'accept-ranges': 'bytes',
+310 verbose headers   date: 'Sun, 28 Aug 2016 14:47:30 GMT',
+310 verbose headers   via: '1.1 varnish',
+310 verbose headers   age: '48',
+310 verbose headers   connection: 'keep-alive',
+310 verbose headers   'x-served-by': 'cache-lcy1125-LCY',
+310 verbose headers   'x-cache': 'HIT',
+310 verbose headers   'x-cache-hits': '2',
+310 verbose headers   'x-timer': 'S1472395650.711275,VS0,VE0',
+310 verbose headers   vary: 'Accept-Encoding' }
+311 silly get cb [ 200,
+311 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+311 silly get     etag: '"CDPXISMR058KHR9Y4QLOJHE6R"',
+311 silly get     'content-type': 'application/json',
+311 silly get     'content-encoding': 'gzip',
+311 silly get     'cache-control': 'max-age=300',
+311 silly get     'content-length': '4192',
+311 silly get     'accept-ranges': 'bytes',
+311 silly get     date: 'Sun, 28 Aug 2016 14:47:30 GMT',
+311 silly get     via: '1.1 varnish',
+311 silly get     age: '48',
+311 silly get     connection: 'keep-alive',
+311 silly get     'x-served-by': 'cache-lcy1125-LCY',
+311 silly get     'x-cache': 'HIT',
+311 silly get     'x-cache-hits': '2',
+311 silly get     'x-timer': 'S1472395650.711275,VS0,VE0',
+311 silly get     vary: 'Accept-Encoding' } ]
+312 verbose get saving double-ended-queue to /Users/liuxinyu/.npm/registry.npmjs.org/double-ended-queue/.cache.json
+313 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+314 silly addNameRange number 2 { name: 'double-ended-queue',
+314 silly addNameRange   range: '>=2.1.0-0 <3.0.0',
+314 silly addNameRange   hasData: true }
+315 silly addNameRange versions [ 'double-ended-queue', [ '0.9.7', '2.0.0-0', '2.1.0-0' ] ]
+316 silly addNamed double-ended-queue@2.1.0-0
+317 verbose addNamed "2.1.0-0" is a plain semver version for double-ended-queue
+318 silly mapToRegistry name double-ended-queue
+319 silly mapToRegistry using default registry
+320 silly mapToRegistry registry http://registry.npmjs.org/
+321 silly mapToRegistry data Result {
+321 silly mapToRegistry   raw: 'double-ended-queue',
+321 silly mapToRegistry   scope: null,
+321 silly mapToRegistry   name: 'double-ended-queue',
+321 silly mapToRegistry   rawSpec: '',
+321 silly mapToRegistry   spec: 'latest',
+321 silly mapToRegistry   type: 'tag' }
+322 silly mapToRegistry uri http://registry.npmjs.org/double-ended-queue
+323 verbose addRemoteTarball http://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz not in flight; adding
+324 verbose addRemoteTarball [ 'http://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz',
+324 verbose addRemoteTarball   '103d3527fd31528f40188130c841efdd78264e5c' ]
+325 info retry fetch attempt 1 at 22:49:07
+326 info attempt registry request try #1 at 22:49:07
+327 http fetch GET http://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz
+328 http 200 http://registry.npmjs.org/redis-parser
+329 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+329 verbose headers   etag: '"ZOJOCY4USVE4MYNQIWBPGI61"',
+329 verbose headers   'content-type': 'application/json',
+329 verbose headers   'content-encoding': 'gzip',
+329 verbose headers   'cache-control': 'max-age=300',
+329 verbose headers   'content-length': '4030',
+329 verbose headers   'accept-ranges': 'bytes',
+329 verbose headers   date: 'Sun, 28 Aug 2016 14:47:31 GMT',
+329 verbose headers   via: '1.1 varnish',
+329 verbose headers   age: '15',
+329 verbose headers   connection: 'keep-alive',
+329 verbose headers   'x-served-by': 'cache-lcy1135-LCY',
+329 verbose headers   'x-cache': 'HIT',
+329 verbose headers   'x-cache-hits': '1',
+329 verbose headers   'x-timer': 'S1472395651.005280,VS0,VE0',
+329 verbose headers   vary: 'Accept-Encoding' }
+330 silly get cb [ 200,
+330 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+330 silly get     etag: '"ZOJOCY4USVE4MYNQIWBPGI61"',
+330 silly get     'content-type': 'application/json',
+330 silly get     'content-encoding': 'gzip',
+330 silly get     'cache-control': 'max-age=300',
+330 silly get     'content-length': '4030',
+330 silly get     'accept-ranges': 'bytes',
+330 silly get     date: 'Sun, 28 Aug 2016 14:47:31 GMT',
+330 silly get     via: '1.1 varnish',
+330 silly get     age: '15',
+330 silly get     connection: 'keep-alive',
+330 silly get     'x-served-by': 'cache-lcy1135-LCY',
+330 silly get     'x-cache': 'HIT',
+330 silly get     'x-cache-hits': '1',
+330 silly get     'x-timer': 'S1472395651.005280,VS0,VE0',
+330 silly get     vary: 'Accept-Encoding' } ]
+331 verbose get saving redis-parser to /Users/liuxinyu/.npm/registry.npmjs.org/redis-parser/.cache.json
+332 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+333 silly addNameRange number 2 { name: 'redis-parser', range: '>=2.0.0 <3.0.0', hasData: true }
+334 silly addNameRange versions [ 'redis-parser',
+334 silly addNameRange   [ '0.0.1',
+334 silly addNameRange     '1.0.0',
+334 silly addNameRange     '1.1.0',
+334 silly addNameRange     '1.2.0',
+334 silly addNameRange     '1.3.0',
+334 silly addNameRange     '2.0.0',
+334 silly addNameRange     '2.0.1',
+334 silly addNameRange     '2.0.2',
+334 silly addNameRange     '2.0.3',
+334 silly addNameRange     '2.0.4' ] ]
+335 silly addNamed redis-parser@2.0.4
+336 verbose addNamed "2.0.4" is a plain semver version for redis-parser
+337 silly mapToRegistry name redis-parser
+338 silly mapToRegistry using default registry
+339 silly mapToRegistry registry http://registry.npmjs.org/
+340 silly mapToRegistry data Result {
+340 silly mapToRegistry   raw: 'redis-parser',
+340 silly mapToRegistry   scope: null,
+340 silly mapToRegistry   name: 'redis-parser',
+340 silly mapToRegistry   rawSpec: '',
+340 silly mapToRegistry   spec: 'latest',
+340 silly mapToRegistry   type: 'tag' }
+341 silly mapToRegistry uri http://registry.npmjs.org/redis-parser
+342 verbose addRemoteTarball http://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz not in flight; adding
+343 verbose addRemoteTarball [ 'http://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz',
+343 verbose addRemoteTarball   '70cbbb3cef8bf41a315388afe14904a65a7a1028' ]
+344 info retry fetch attempt 1 at 22:49:07
+345 info attempt registry request try #1 at 22:49:07
+346 http fetch GET http://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz
+347 http fetch 200 http://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz
+348 silly fetchAndShaCheck shasum 103d3527fd31528f40188130c841efdd78264e5c
+349 verbose addTmpTarball /var/folders/54/kgynt5hn365_5zqqy9_flm3h0000gn/T/npm-65128-f5055768/registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz not in flight; adding
+350 verbose addTmpTarball already have metadata; skipping unpack for double-ended-queue@2.1.0-0
+351 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+352 silly cache afterAdd double-ended-queue@2.1.0-0
+353 verbose afterAdd /Users/liuxinyu/.npm/double-ended-queue/2.1.0-0/package/package.json not in flight; writing
+354 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+355 verbose afterAdd /Users/liuxinyu/.npm/double-ended-queue/2.1.0-0/package/package.json written
+356 http 200 http://registry.npmjs.org/redis-commands
+357 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+357 verbose headers   etag: '"2CPOLMT91E3QI7MP5VHEKJLJK"',
+357 verbose headers   'content-type': 'application/json',
+357 verbose headers   'content-encoding': 'gzip',
+357 verbose headers   'cache-control': 'max-age=300',
+357 verbose headers   'content-length': '2644',
+357 verbose headers   'accept-ranges': 'bytes',
+357 verbose headers   date: 'Sun, 28 Aug 2016 14:47:30 GMT',
+357 verbose headers   via: '1.1 varnish',
+357 verbose headers   age: '15',
+357 verbose headers   connection: 'keep-alive',
+357 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+357 verbose headers   'x-cache': 'HIT',
+357 verbose headers   'x-cache-hits': '2',
+357 verbose headers   'x-timer': 'S1472395650.726784,VS0,VE0',
+357 verbose headers   vary: 'Accept-Encoding' }
+358 silly get cb [ 200,
+358 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+358 silly get     etag: '"2CPOLMT91E3QI7MP5VHEKJLJK"',
+358 silly get     'content-type': 'application/json',
+358 silly get     'content-encoding': 'gzip',
+358 silly get     'cache-control': 'max-age=300',
+358 silly get     'content-length': '2644',
+358 silly get     'accept-ranges': 'bytes',
+358 silly get     date: 'Sun, 28 Aug 2016 14:47:30 GMT',
+358 silly get     via: '1.1 varnish',
+358 silly get     age: '15',
+358 silly get     connection: 'keep-alive',
+358 silly get     'x-served-by': 'cache-lcy1123-LCY',
+358 silly get     'x-cache': 'HIT',
+358 silly get     'x-cache-hits': '2',
+358 silly get     'x-timer': 'S1472395650.726784,VS0,VE0',
+358 silly get     vary: 'Accept-Encoding' } ]
+359 verbose get saving redis-commands to /Users/liuxinyu/.npm/registry.npmjs.org/redis-commands/.cache.json
+360 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+361 silly addNameRange number 2 { name: 'redis-commands',
+361 silly addNameRange   range: '>=1.2.0 <2.0.0',
+361 silly addNameRange   hasData: true }
+362 silly addNameRange versions [ 'redis-commands',
+362 silly addNameRange   [ '0.0.1',
+362 silly addNameRange     '0.0.2',
+362 silly addNameRange     '0.0.3',
+362 silly addNameRange     '1.0.0',
+362 silly addNameRange     '1.0.1',
+362 silly addNameRange     '1.0.2',
+362 silly addNameRange     '1.1.0',
+362 silly addNameRange     '1.2.0' ] ]
+363 silly addNamed redis-commands@1.2.0
+364 verbose addNamed "1.2.0" is a plain semver version for redis-commands
+365 silly mapToRegistry name redis-commands
+366 silly mapToRegistry using default registry
+367 silly mapToRegistry registry http://registry.npmjs.org/
+368 silly mapToRegistry data Result {
+368 silly mapToRegistry   raw: 'redis-commands',
+368 silly mapToRegistry   scope: null,
+368 silly mapToRegistry   name: 'redis-commands',
+368 silly mapToRegistry   rawSpec: '',
+368 silly mapToRegistry   spec: 'latest',
+368 silly mapToRegistry   type: 'tag' }
+369 silly mapToRegistry uri http://registry.npmjs.org/redis-commands
+370 verbose addRemoteTarball http://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz not in flight; adding
+371 verbose addRemoteTarball [ 'http://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz',
+371 verbose addRemoteTarball   '4808e7a0fcb1d3609bec56eecc3532dacbab981c' ]
+372 info retry fetch attempt 1 at 22:49:07
+373 info attempt registry request try #1 at 22:49:07
+374 http fetch GET http://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz
+375 http 304 http://registry.npmjs.org/bindings
+376 verbose headers { date: 'Sun, 28 Aug 2016 14:47:31 GMT',
+376 verbose headers   via: '1.1 varnish',
+376 verbose headers   'cache-control': 'max-age=300',
+376 verbose headers   etag: '"33TX4J3DNTGF7K41ZUV6OA182"',
+376 verbose headers   age: '172',
+376 verbose headers   connection: 'keep-alive',
+376 verbose headers   'x-served-by': 'cache-lcy1127-LCY',
+376 verbose headers   'x-cache': 'HIT',
+376 verbose headers   'x-cache-hits': '1',
+376 verbose headers   'x-timer': 'S1472395651.090444,VS0,VE0',
+376 verbose headers   vary: 'Accept-Encoding' }
+377 silly get cb [ 304,
+377 silly get   { date: 'Sun, 28 Aug 2016 14:47:31 GMT',
+377 silly get     via: '1.1 varnish',
+377 silly get     'cache-control': 'max-age=300',
+377 silly get     etag: '"33TX4J3DNTGF7K41ZUV6OA182"',
+377 silly get     age: '172',
+377 silly get     connection: 'keep-alive',
+377 silly get     'x-served-by': 'cache-lcy1127-LCY',
+377 silly get     'x-cache': 'HIT',
+377 silly get     'x-cache-hits': '1',
+377 silly get     'x-timer': 'S1472395651.090444,VS0,VE0',
+377 silly get     vary: 'Accept-Encoding' } ]
+378 verbose etag http://registry.npmjs.org/bindings from cache
+379 verbose get saving bindings to /Users/liuxinyu/.npm/registry.npmjs.org/bindings/.cache.json
+380 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+381 silly addNameRange number 2 { name: 'bindings', range: '>=1.2.1 <2.0.0', hasData: true }
+382 silly addNameRange versions [ 'bindings',
+382 silly addNameRange   [ '0.0.1',
+382 silly addNameRange     '0.1.0',
+382 silly addNameRange     '0.1.1',
+382 silly addNameRange     '0.2.0',
+382 silly addNameRange     '0.2.1',
+382 silly addNameRange     '0.2.2',
+382 silly addNameRange     '0.2.3',
+382 silly addNameRange     '0.2.4',
+382 silly addNameRange     '0.3.0',
+382 silly addNameRange     '0.4.0',
+382 silly addNameRange     '1.0.0',
+382 silly addNameRange     '1.1.0',
+382 silly addNameRange     '1.1.1',
+382 silly addNameRange     '1.2.0',
+382 silly addNameRange     '1.2.1' ] ]
+383 silly addNamed bindings@1.2.1
+384 verbose addNamed "1.2.1" is a plain semver version for bindings
+385 silly cache afterAdd bindings@1.2.1
+386 verbose afterAdd /Users/liuxinyu/.npm/bindings/1.2.1/package/package.json not in flight; writing
+387 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+388 verbose afterAdd /Users/liuxinyu/.npm/bindings/1.2.1/package/package.json written
+389 http fetch 200 http://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz
+390 info retry will retry, error on last attempt: Error: read ECONNRESET
+391 http fetch 200 http://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz
+392 silly fetchAndShaCheck shasum 4808e7a0fcb1d3609bec56eecc3532dacbab981c
+393 verbose addTmpTarball /var/folders/54/kgynt5hn365_5zqqy9_flm3h0000gn/T/npm-65128-f5055768/registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz not in flight; adding
+394 verbose addTmpTarball already have metadata; skipping unpack for redis-commands@1.2.0
+395 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+396 silly cache afterAdd redis-commands@1.2.0
+397 verbose afterAdd /Users/liuxinyu/.npm/redis-commands/1.2.0/package/package.json not in flight; writing
+398 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+399 verbose afterAdd /Users/liuxinyu/.npm/redis-commands/1.2.0/package/package.json written
+400 silly fetchAndShaCheck shasum 70cbbb3cef8bf41a315388afe14904a65a7a1028
+401 verbose addTmpTarball /var/folders/54/kgynt5hn365_5zqqy9_flm3h0000gn/T/npm-65128-f5055768/registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz not in flight; adding
+402 verbose addTmpTarball already have metadata; skipping unpack for redis-parser@2.0.4
+403 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+404 silly cache afterAdd redis-parser@2.0.4
+405 verbose afterAdd /Users/liuxinyu/.npm/redis-parser/2.0.4/package/package.json not in flight; writing
+406 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+407 verbose afterAdd /Users/liuxinyu/.npm/redis-parser/2.0.4/package/package.json written
+408 silly install resolved [ { name: 'double-ended-queue',
+408 silly install resolved     description: 'Extremely fast double-ended queue implementation',
+408 silly install resolved     version: '2.1.0-0',
+408 silly install resolved     keywords:
+408 silly install resolved      [ 'data-structure',
+408 silly install resolved        'data-structures',
+408 silly install resolved        'queue',
+408 silly install resolved        'deque',
+408 silly install resolved        'double-ended-queue' ],
+408 silly install resolved     scripts: { test: 'grunt test' },
+408 silly install resolved     homepage: 'https://github.com/petkaantonov/deque',
+408 silly install resolved     repository: { type: 'git', url: 'git://github.com/petkaantonov/deque.git' },
+408 silly install resolved     bugs: { url: 'http://github.com/petkaantonov/deque/issues' },
+408 silly install resolved     license: 'MIT',
+408 silly install resolved     author:
+408 silly install resolved      { name: 'Petka Antonov',
+408 silly install resolved        email: 'petka_antonov@hotmail.com',
+408 silly install resolved        url: 'http://github.com/petkaantonov/' },
+408 silly install resolved     devDependencies:
+408 silly install resolved      { grunt: '~0.4.1',
+408 silly install resolved        'grunt-contrib-jshint': '~0.6.4',
+408 silly install resolved        'jshint-stylish': 'latest',
+408 silly install resolved        acorn: '~0.3.1',
+408 silly install resolved        mocha: '~1.12.1',
+408 silly install resolved        'grunt-cli': '~0.1.9',
+408 silly install resolved        bluebird: '~0.11',
+408 silly install resolved        benchmark: '~1.0.0',
+408 silly install resolved        deque: '0.0.4',
+408 silly install resolved        q: '~0.9.7',
+408 silly install resolved        'semver-utils': '~1.1.0' },
+408 silly install resolved     main: './js/deque.js',
+408 silly install resolved     gitHead: '51eada75cea686f1eb0c8bb5be486ac630e9b7ee',
+408 silly install resolved     _id: 'double-ended-queue@2.1.0-0',
+408 silly install resolved     _shasum: '103d3527fd31528f40188130c841efdd78264e5c',
+408 silly install resolved     _from: 'double-ended-queue@>=2.1.0-0 <3.0.0',
+408 silly install resolved     _npmVersion: '2.1.12',
+408 silly install resolved     _nodeVersion: '0.10.34',
+408 silly install resolved     _npmUser: { name: 'esailija', email: 'petka_antonov@hotmail.com' },
+408 silly install resolved     maintainers: [ [Object] ],
+408 silly install resolved     dist:
+408 silly install resolved      { shasum: '103d3527fd31528f40188130c841efdd78264e5c',
+408 silly install resolved        tarball: 'https://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz' },
+408 silly install resolved     directories: {},
+408 silly install resolved     _resolved: 'http://registry.npmjs.org/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz' },
+408 silly install resolved   { name: 'redis-commands',
+408 silly install resolved     version: '1.2.0',
+408 silly install resolved     description: 'Redis commands',
+408 silly install resolved     main: 'index.js',
+408 silly install resolved     scripts:
+408 silly install resolved      { test: 'mocha',
+408 silly install resolved        posttest: 'npm run coverage && npm run coverage:check',
+408 silly install resolved        coverage: 'node ./node_modules/istanbul/lib/cli.js cover --preserve-comments ./node_modules/mocha/bin/_mocha -- -R spec',
+408 silly install resolved        'coverage:check': 'node ./node_modules/istanbul/lib/cli.js check-coverage --branch 100 --statement 100',
+408 silly install resolved        build: 'node tools/build' },
+408 silly install resolved     repository:
+408 silly install resolved      { type: 'git',
+408 silly install resolved        url: 'git+https://github.com/NodeRedis/redis-commands.git' },
+408 silly install resolved     keywords: [ 'redis', 'commands', 'prefix' ],
+408 silly install resolved     author: { name: 'luin', email: 'i@zihua.li', url: 'http://zihua.li' },
+408 silly install resolved     license: 'MIT',
+408 silly install resolved     bugs: { url: 'https://github.com/NodeRedis/redis-commonds/issues' },
+408 silly install resolved     homepage: 'https://github.com/NodeRedis/redis-commonds',
+408 silly install resolved     devDependencies:
+408 silly install resolved      { chai: '^3.4.0',
+408 silly install resolved        'codeclimate-test-reporter': '^0.3.1',
+408 silly install resolved        ioredis: '^2.0.0-rc2',
+408 silly install resolved        istanbul: '^0.4.3',
+408 silly install resolved        'json-stable-stringify': '^1.0.0',
+408 silly install resolved        mocha: '^2.2.1' },
+408 silly install resolved     gitHead: 'd8913533a75f29e7748b8480b4d7b9d9e7a05526',
+408 silly install resolved     _id: 'redis-commands@1.2.0',
+408 silly install resolved     _shasum: '4808e7a0fcb1d3609bec56eecc3532dacbab981c',
+408 silly install resolved     _from: 'redis-commands@>=1.2.0 <2.0.0',
+408 silly install resolved     _npmVersion: '2.15.1',
+408 silly install resolved     _nodeVersion: '4.4.3',
+408 silly install resolved     _npmUser: { name: 'bridgear', email: 'ruben@bridgewater.de' },
+408 silly install resolved     dist:
+408 silly install resolved      { shasum: '4808e7a0fcb1d3609bec56eecc3532dacbab981c',
+408 silly install resolved        tarball: 'https://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz' },
+408 silly install resolved     maintainers: [ [Object], [Object] ],
+408 silly install resolved     _npmOperationalInternal:
+408 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+408 silly install resolved        tmp: 'tmp/redis-commands-1.2.0.tgz_1461202467613_0.6769857455510646' },
+408 silly install resolved     directories: {},
+408 silly install resolved     _resolved: 'http://registry.npmjs.org/redis-commands/-/redis-commands-1.2.0.tgz' },
+408 silly install resolved   { name: 'redis-parser',
+408 silly install resolved     version: '2.0.4',
+408 silly install resolved     description: 'Javascript Redis protocol (RESP) parser',
+408 silly install resolved     main: 'index.js',
+408 silly install resolved     scripts:
+408 silly install resolved      { test: 'npm run coverage',
+408 silly install resolved        benchmark: 'node ./benchmark',
+408 silly install resolved        posttest: 'standard && npm run coverage:check',
+408 silly install resolved        coverage: 'node ./node_modules/istanbul/lib/cli.js cover --preserve-comments ./node_modules/mocha/bin/_mocha -- -R spec',
+408 silly install resolved        'coverage:check': 'node ./node_modules/istanbul/lib/cli.js check-coverage --branch 100 --statement 100' },
+408 silly install resolved     repository:
+408 silly install resolved      { type: 'git',
+408 silly install resolved        url: 'git+https://github.com/NodeRedis/node-redis-parser.git' },
+408 silly install resolved     keywords:
+408 silly install resolved      [ 'redis',
+408 silly install resolved        'protocol',
+408 silly install resolved        'parser',
+408 silly install resolved        'database',
+408 silly install resolved        'javascript',
+408 silly install resolved        'node',
+408 silly install resolved        'nodejs',
+408 silly install resolved        'resp',
+408 silly install resolved        'hiredis' ],
+408 silly install resolved     engines: { node: '>=0.10.0' },
+408 silly install resolved     devDependencies:
+408 silly install resolved      { benchmark: '^2.1.0',
+408 silly install resolved        'codeclimate-test-reporter': '^0.3.1',
+408 silly install resolved        'intercept-stdout': '^0.1.2',
+408 silly install resolved        istanbul: '^0.4.0',
+408 silly install resolved        standard: '^7.0.1',
+408 silly install resolved        mocha: '^2.3.2',
+408 silly install resolved        hiredis: '^0.5.0' },
+408 silly install resolved     author: { name: 'Ruben Bridgewater' },
+408 silly install resolved     license: 'MIT',
+408 silly install resolved     bugs: { url: 'https://github.com/NodeRedis/node-redis-parser/issues' },
+408 silly install resolved     homepage: 'https://github.com/NodeRedis/node-redis-parser#readme',
+408 silly install resolved     directories: { test: 'test', lib: 'lib' },
+408 silly install resolved     gitHead: '926d8c620722a68f81b4969040142e20bfadb062',
+408 silly install resolved     _id: 'redis-parser@2.0.4',
+408 silly install resolved     _shasum: '70cbbb3cef8bf41a315388afe14904a65a7a1028',
+408 silly install resolved     _from: 'redis-parser@>=2.0.0 <3.0.0',
+408 silly install resolved     _npmVersion: '2.15.8',
+408 silly install resolved     _nodeVersion: '4.4.7',
+408 silly install resolved     _npmUser: { name: 'bridgear', email: 'ruben@bridgewater.de' },
+408 silly install resolved     dist:
+408 silly install resolved      { shasum: '70cbbb3cef8bf41a315388afe14904a65a7a1028',
+408 silly install resolved        tarball: 'https://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz' },
+408 silly install resolved     maintainers: [ [Object] ],
+408 silly install resolved     _npmOperationalInternal:
+408 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+408 silly install resolved        tmp: 'tmp/redis-parser-2.0.4.tgz_1469117535256_0.6028041366953403' },
+408 silly install resolved     _resolved: 'http://registry.npmjs.org/redis-parser/-/redis-parser-2.0.4.tgz' } ]
+409 info install double-ended-queue@2.1.0-0 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+410 info install redis-commands@1.2.0 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+411 info install redis-parser@2.0.4 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+412 info installOne double-ended-queue@2.1.0-0
+413 verbose installOne of double-ended-queue to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis not in flight; installing
+414 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+415 info installOne redis-commands@1.2.0
+416 verbose installOne of redis-commands to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis not in flight; installing
+417 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+418 info installOne redis-parser@2.0.4
+419 verbose installOne of redis-parser to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis not in flight; installing
+420 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+421 verbose lock using /Users/liuxinyu/.npm/_locks/redis-commands-5eb8ce85b09cb30b.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+422 verbose lock using /Users/liuxinyu/.npm/_locks/redis-parser-ca40e654b80ec6a8.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+423 silly install write writing redis-commands 1.2.0 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+424 silly install write writing redis-parser 2.0.4 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+425 verbose lock using /Users/liuxinyu/.npm/_locks/double-ended-queue-d273ba7bd7e8d1a3.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+426 silly install write writing double-ended-queue 2.1.0-0 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+427 verbose unbuild node_modules/redis/node_modules/redis-commands
+428 verbose unbuild node_modules/redis/node_modules/redis-parser
+429 verbose unbuild node_modules/redis/node_modules/double-ended-queue
+430 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+431 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+432 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+433 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+434 verbose tar unpack /Users/liuxinyu/.npm/redis-commands/1.2.0/package.tgz
+435 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+436 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands is being purged
+437 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+438 verbose tar unpack /Users/liuxinyu/.npm/redis-parser/2.0.4/package.tgz
+439 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+440 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser is being purged
+441 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+442 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+443 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+444 silly gunzTarPerm modes [ '755', '644' ]
+445 silly gunzTarPerm modes [ '755', '644' ]
+446 verbose tar unpack /Users/liuxinyu/.npm/double-ended-queue/2.1.0-0/package.tgz
+447 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+448 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue is being purged
+449 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+450 silly gunzTarPerm modes [ '755', '644' ]
+451 silly gunzTarPerm extractEntry package.json
+452 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+453 silly gunzTarPerm extractEntry package.json
+454 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+455 silly gunzTarPerm extractEntry package.json
+456 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+457 silly gunzTarPerm extractEntry .npmignore
+458 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+459 silly gunzTarPerm extractEntry README.md
+460 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+461 silly gunzTarPerm extractEntry .npmignore
+462 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+463 silly gunzTarPerm extractEntry README.md
+464 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+465 silly gunzTarPerm extractEntry .npmignore
+466 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+467 silly gunzTarPerm extractEntry README.md
+468 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+469 silly gunzTarPerm extractEntry LICENSE
+470 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+471 silly gunzTarPerm extractEntry index.js
+472 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+473 silly gunzTarPerm extractEntry LICENSE
+474 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+475 silly gunzTarPerm extractEntry index.js
+476 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+477 silly gunzTarPerm extractEntry LICENSE
+478 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+479 silly gunzTarPerm extractEntry Gruntfile.js
+480 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 420 ]
+481 silly gunzTarPerm extractEntry changelog.md
+482 silly gunzTarPerm modified mode [ 'changelog.md', 436, 420 ]
+483 silly gunzTarPerm extractEntry .codeclimate.yml
+484 silly gunzTarPerm modified mode [ '.codeclimate.yml', 436, 420 ]
+485 silly gunzTarPerm extractEntry commands.json
+486 silly gunzTarPerm modified mode [ 'commands.json', 436, 420 ]
+487 silly gunzTarPerm extractEntry .travis.yml
+488 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+489 silly gunzTarPerm extractEntry test/index.js
+490 silly gunzTarPerm modified mode [ 'test/index.js', 436, 420 ]
+491 silly gunzTarPerm extractEntry changelog.md
+492 silly gunzTarPerm modified mode [ 'changelog.md', 436, 420 ]
+493 silly gunzTarPerm extractEntry tools/build.js
+494 silly gunzTarPerm modified mode [ 'tools/build.js', 436, 420 ]
+495 silly gunzTarPerm extractEntry js/deque.js
+496 silly gunzTarPerm modified mode [ 'js/deque.js', 438, 420 ]
+497 silly gunzTarPerm extractEntry lib/hiredis.js
+498 silly gunzTarPerm modified mode [ 'lib/hiredis.js', 436, 420 ]
+499 silly gunzTarPerm extractEntry lib/parser.js
+500 silly gunzTarPerm modified mode [ 'lib/parser.js', 436, 420 ]
+501 silly gunzTarPerm extractEntry lib/replyError.js
+502 silly gunzTarPerm modified mode [ 'lib/replyError.js', 436, 420 ]
+503 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue/package.json
+504 info preinstall double-ended-queue@2.1.0-0
+505 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue/package.json
+506 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue/package.json
+507 silly install resolved []
+508 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+509 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+510 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser/package.json
+511 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands/package.json
+512 info linkStuff double-ended-queue@2.1.0-0
+513 silly linkStuff double-ended-queue@2.1.0-0 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules as its parent node_modules
+514 info preinstall redis-parser@2.0.4
+515 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser/package.json
+516 info preinstall redis-commands@1.2.0
+517 verbose linkBins double-ended-queue@2.1.0-0
+518 verbose linkMans double-ended-queue@2.1.0-0
+519 verbose rebuildBundles double-ended-queue@2.1.0-0
+520 info install double-ended-queue@2.1.0-0
+521 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands/package.json
+522 info postinstall double-ended-queue@2.1.0-0
+523 verbose unlock done using /Users/liuxinyu/.npm/_locks/double-ended-queue-d273ba7bd7e8d1a3.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/double-ended-queue
+524 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser/package.json
+525 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands/package.json
+526 silly install resolved []
+527 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+528 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+529 silly install resolved []
+530 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+531 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+532 info linkStuff redis-parser@2.0.4
+533 silly linkStuff redis-parser@2.0.4 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules as its parent node_modules
+534 info linkStuff redis-commands@1.2.0
+535 silly linkStuff redis-commands@1.2.0 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules as its parent node_modules
+536 verbose linkBins redis-parser@2.0.4
+537 verbose linkMans redis-parser@2.0.4
+538 verbose rebuildBundles redis-parser@2.0.4
+539 info install redis-parser@2.0.4
+540 verbose linkBins redis-commands@1.2.0
+541 verbose linkMans redis-commands@1.2.0
+542 verbose rebuildBundles redis-commands@1.2.0
+543 info postinstall redis-parser@2.0.4
+544 info install redis-commands@1.2.0
+545 info postinstall redis-commands@1.2.0
+546 verbose unlock done using /Users/liuxinyu/.npm/_locks/redis-parser-ca40e654b80ec6a8.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-parser
+547 verbose unlock done using /Users/liuxinyu/.npm/_locks/redis-commands-5eb8ce85b09cb30b.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis/node_modules/redis-commands
+548 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+549 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+550 info linkStuff redis@2.6.2
+551 silly linkStuff redis@2.6.2 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules as its parent node_modules
+552 verbose linkBins redis@2.6.2
+553 verbose linkMans redis@2.6.2
+554 verbose rebuildBundles redis@2.6.2
+555 verbose rebuildBundles [ 'double-ended-queue', 'redis-commands', 'redis-parser' ]
+556 info install redis@2.6.2
+557 info postinstall redis@2.6.2
+558 verbose unlock done using /Users/liuxinyu/.npm/_locks/redis-ada794b22b612e49.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/redis
+559 info attempt registry request try #2 at 22:49:17
+560 verbose etag "EGTR1APXEV7TH8V3QYT0WN357"
+561 http request GET http://registry.npmjs.org/nan
+562 http 200 http://registry.npmjs.org/nan
+563 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+563 verbose headers   etag: '"NAY6YRKIZAXUCU18M1YHIEA2"',
+563 verbose headers   'content-type': 'application/json',
+563 verbose headers   'content-encoding': 'gzip',
+563 verbose headers   'cache-control': 'max-age=300',
+563 verbose headers   'content-length': '17135',
+563 verbose headers   'accept-ranges': 'bytes',
+563 verbose headers   date: 'Sun, 28 Aug 2016 14:47:41 GMT',
+563 verbose headers   via: '1.1 varnish',
+563 verbose headers   age: '49',
+563 verbose headers   connection: 'keep-alive',
+563 verbose headers   'x-served-by': 'cache-lcy1123-LCY',
+563 verbose headers   'x-cache': 'HIT',
+563 verbose headers   'x-cache-hits': '56',
+563 verbose headers   'x-timer': 'S1472395661.751308,VS0,VE0',
+563 verbose headers   vary: 'Accept-Encoding' }
+564 silly get cb [ 200,
+564 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+564 silly get     etag: '"NAY6YRKIZAXUCU18M1YHIEA2"',
+564 silly get     'content-type': 'application/json',
+564 silly get     'content-encoding': 'gzip',
+564 silly get     'cache-control': 'max-age=300',
+564 silly get     'content-length': '17135',
+564 silly get     'accept-ranges': 'bytes',
+564 silly get     date: 'Sun, 28 Aug 2016 14:47:41 GMT',
+564 silly get     via: '1.1 varnish',
+564 silly get     age: '49',
+564 silly get     connection: 'keep-alive',
+564 silly get     'x-served-by': 'cache-lcy1123-LCY',
+564 silly get     'x-cache': 'HIT',
+564 silly get     'x-cache-hits': '56',
+564 silly get     'x-timer': 'S1472395661.751308,VS0,VE0',
+564 silly get     vary: 'Accept-Encoding' } ]
+565 verbose get saving nan to /Users/liuxinyu/.npm/registry.npmjs.org/nan/.cache.json
+566 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+567 silly addNameRange number 2 { name: 'nan', range: '>=2.3.4 <3.0.0', hasData: true }
+568 silly addNameRange versions [ 'nan',
+568 silly addNameRange   [ '0.3.0-wip',
+568 silly addNameRange     '0.3.0-wip2',
+568 silly addNameRange     '0.3.0',
+568 silly addNameRange     '0.3.1',
+568 silly addNameRange     '0.3.2',
+568 silly addNameRange     '0.4.0',
+568 silly addNameRange     '0.4.1',
+568 silly addNameRange     '0.4.2',
+568 silly addNameRange     '0.4.3',
+568 silly addNameRange     '0.4.4',
+568 silly addNameRange     '0.5.0',
+568 silly addNameRange     '0.5.1',
+568 silly addNameRange     '0.5.2',
+568 silly addNameRange     '0.6.0',
+568 silly addNameRange     '0.7.0',
+568 silly addNameRange     '0.7.1',
+568 silly addNameRange     '0.8.0',
+568 silly addNameRange     '1.0.0',
+568 silly addNameRange     '1.1.0',
+568 silly addNameRange     '1.1.1',
+568 silly addNameRange     '1.1.2',
+568 silly addNameRange     '1.2.0',
+568 silly addNameRange     '1.3.0',
+568 silly addNameRange     '1.4.0',
+568 silly addNameRange     '1.4.1',
+568 silly addNameRange     '1.5.0',
+568 silly addNameRange     '1.4.2',
+568 silly addNameRange     '1.4.3',
+568 silly addNameRange     '1.5.1',
+568 silly addNameRange     '1.5.2',
+568 silly addNameRange     '1.6.0',
+568 silly addNameRange     '1.5.3',
+568 silly addNameRange     '1.6.1',
+568 silly addNameRange     '1.6.2',
+568 silly addNameRange     '1.7.0',
+568 silly addNameRange     '1.8.0',
+568 silly addNameRange     '1.8.1',
+568 silly addNameRange     '1.8.2',
+568 silly addNameRange     '1.8.3',
+568 silly addNameRange     '1.8.4',
+568 silly addNameRange     '1.9.0',
+568 silly addNameRange     '2.0.0',
+568 silly addNameRange     '2.0.1',
+568 silly addNameRange     '2.0.2',
+568 silly addNameRange     '2.0.3',
+568 silly addNameRange     '2.0.4',
+568 silly addNameRange     '2.0.5',
+568 silly addNameRange     '2.0.6',
+568 silly addNameRange     '2.0.7',
+568 silly addNameRange     '2.0.8',
+568 silly addNameRange     '2.0.9',
+568 silly addNameRange     '2.1.0',
+568 silly addNameRange     '2.2.0',
+568 silly addNameRange     '2.2.1',
+568 silly addNameRange     '2.3.0',
+568 silly addNameRange     '2.3.1',
+568 silly addNameRange     '2.3.2',
+568 silly addNameRange     '2.3.3',
+568 silly addNameRange     '2.3.4',
+568 silly addNameRange     '2.3.5',
+568 silly addNameRange     '2.4.0' ] ]
+569 silly addNamed nan@2.4.0
+570 verbose addNamed "2.4.0" is a plain semver version for nan
+571 silly cache afterAdd nan@2.4.0
+572 verbose afterAdd /Users/liuxinyu/.npm/nan/2.4.0/package/package.json not in flight; writing
+573 verbose correctMkdir /Users/liuxinyu/.npm correctMkdir not in flight; initializing
+574 verbose afterAdd /Users/liuxinyu/.npm/nan/2.4.0/package/package.json written
+575 silly install resolved [ { name: 'bindings',
+575 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+575 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+575 silly install resolved     version: '1.2.1',
+575 silly install resolved     author:
+575 silly install resolved      { name: 'Nathan Rajlich',
+575 silly install resolved        email: 'nathan@tootallnate.net',
+575 silly install resolved        url: 'http://tootallnate.net' },
+575 silly install resolved     repository:
+575 silly install resolved      { type: 'git',
+575 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+575 silly install resolved     main: './bindings.js',
+575 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+575 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+575 silly install resolved     license: 'MIT',
+575 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+575 silly install resolved     _id: 'bindings@1.2.1',
+575 silly install resolved     scripts: {},
+575 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+575 silly install resolved     _from: 'bindings@>=1.2.1 <2.0.0',
+575 silly install resolved     _npmVersion: '1.4.14',
+575 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+575 silly install resolved     maintainers: [ [Object] ],
+575 silly install resolved     dist:
+575 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+575 silly install resolved        size: 3625,
+575 silly install resolved        noattachment: false,
+575 silly install resolved        tarball: 'https://r.cnpmjs.org/bindings/download/bindings-1.2.1.tgz' },
+575 silly install resolved     directories: {},
+575 silly install resolved     publish_time: 1403979205303,
+575 silly install resolved     _cnpm_publish_time: 1403979205303,
+575 silly install resolved     _resolved: 'https://r.cnpmjs.org/bindings/download/bindings-1.2.1.tgz',
+575 silly install resolved     readme: 'ERROR: No README data found!' },
+575 silly install resolved   { name: 'nan',
+575 silly install resolved     version: '2.4.0',
+575 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 6 compatibility',
+575 silly install resolved     main: 'include_dirs.js',
+575 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+575 silly install resolved     scripts:
+575 silly install resolved      { test: 'tap --gc --stderr test/js/*-test.js',
+575 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+575 silly install resolved        docs: 'doc/.build.sh' },
+575 silly install resolved     contributors:
+575 silly install resolved      [ [Object],
+575 silly install resolved        [Object],
+575 silly install resolved        [Object],
+575 silly install resolved        [Object],
+575 silly install resolved        [Object],
+575 silly install resolved        [Object],
+575 silly install resolved        [Object] ],
+575 silly install resolved     devDependencies:
+575 silly install resolved      { bindings: '~1.2.1',
+575 silly install resolved        commander: '^2.8.1',
+575 silly install resolved        glob: '^5.0.14',
+575 silly install resolved        'node-gyp': '~3.0.1',
+575 silly install resolved        'readable-stream': '^2.1.4',
+575 silly install resolved        tap: '~0.7.1',
+575 silly install resolved        xtend: '~4.0.0' },
+575 silly install resolved     license: 'MIT',
+575 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+575 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+575 silly install resolved     _id: 'nan@2.4.0',
+575 silly install resolved     _shasum: 'fb3c59d45fe4effe215f0b890f8adf6eb32d2232',
+575 silly install resolved     _resolved: 'http://registry.npmjs.org/nan/-/nan-2.4.0.tgz',
+575 silly install resolved     _from: 'nan@>=2.3.4 <3.0.0',
+575 silly install resolved     _npmVersion: '3.3.6',
+575 silly install resolved     _nodeVersion: '5.0.0',
+575 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+575 silly install resolved     dist:
+575 silly install resolved      { shasum: 'fb3c59d45fe4effe215f0b890f8adf6eb32d2232',
+575 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.4.0.tgz' },
+575 silly install resolved     maintainers: [ [Object], [Object] ],
+575 silly install resolved     _npmOperationalInternal:
+575 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+575 silly install resolved        tmp: 'tmp/nan-2.4.0.tgz_1468158679820_0.6951719264034182' },
+575 silly install resolved     directories: {},
+575 silly install resolved     readme: 'ERROR: No README data found!' } ]
+576 info install bindings@1.2.1 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+577 info install nan@2.4.0 into /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+578 info installOne bindings@1.2.1
+579 verbose installOne of bindings to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis not in flight; installing
+580 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+581 info installOne nan@2.4.0
+582 verbose installOne of nan to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis not in flight; installing
+583 verbose correctMkdir /Users/liuxinyu/.npm/_locks correctMkdir not in flight; initializing
+584 verbose lock using /Users/liuxinyu/.npm/_locks/bindings-e57e8928007e7ad2.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+585 verbose lock using /Users/liuxinyu/.npm/_locks/nan-261d306554169ef4.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+586 silly install write writing bindings 1.2.1 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+587 silly install write writing nan 2.4.0 to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+588 verbose unbuild node_modules/hiredis/node_modules/bindings
+589 verbose unbuild node_modules/hiredis/node_modules/nan
+590 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+591 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+592 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+593 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+594 verbose tar unpack /Users/liuxinyu/.npm/bindings/1.2.1/package.tgz
+595 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+596 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings is being purged
+597 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+598 verbose tar unpack /Users/liuxinyu/.npm/nan/2.4.0/package.tgz
+599 verbose tar unpacking to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+600 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan is being purged
+601 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+602 silly gunzTarPerm modes [ '755', '644' ]
+603 silly gunzTarPerm modes [ '755', '644' ]
+604 silly gunzTarPerm extractEntry package.json
+605 silly gunzTarPerm extractEntry package.json
+606 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+607 silly gunzTarPerm extractEntry README.md
+608 silly gunzTarPerm extractEntry bindings.js
+609 silly gunzTarPerm extractEntry README.md
+610 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+611 silly gunzTarPerm extractEntry include_dirs.js
+612 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+613 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+614 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+615 silly gunzTarPerm extractEntry CHANGELOG.md
+616 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+617 silly gunzTarPerm extractEntry LICENSE.md
+618 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+619 silly gunzTarPerm extractEntry doc/node_misc.md
+620 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+621 silly gunzTarPerm extractEntry doc/asyncworker.md
+622 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+623 silly gunzTarPerm extractEntry doc/callback.md
+624 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+625 silly gunzTarPerm extractEntry doc/converters.md
+626 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+627 silly gunzTarPerm extractEntry doc/errors.md
+628 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+629 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings/package.json
+630 info preinstall bindings@1.2.1
+631 silly gunzTarPerm extractEntry doc/maybe_types.md
+632 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+633 silly gunzTarPerm extractEntry doc/methods.md
+634 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+635 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings/package.json
+636 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings/package.json
+637 silly gunzTarPerm extractEntry doc/new.md
+638 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+639 silly install resolved []
+640 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+641 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+642 info linkStuff bindings@1.2.1
+643 silly linkStuff bindings@1.2.1 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules as its parent node_modules
+644 silly gunzTarPerm extractEntry doc/buffers.md
+645 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+646 silly gunzTarPerm extractEntry doc/object_wrappers.md
+647 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 420 ]
+648 verbose linkBins bindings@1.2.1
+649 verbose linkMans bindings@1.2.1
+650 verbose rebuildBundles bindings@1.2.1
+651 info install bindings@1.2.1
+652 info postinstall bindings@1.2.1
+653 verbose unlock done using /Users/liuxinyu/.npm/_locks/bindings-e57e8928007e7ad2.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/bindings
+654 silly gunzTarPerm extractEntry doc/persistent.md
+655 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+656 silly gunzTarPerm extractEntry doc/scopes.md
+657 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+658 silly gunzTarPerm extractEntry doc/script.md
+659 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+660 silly gunzTarPerm extractEntry doc/string_bytes.md
+661 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+662 silly gunzTarPerm extractEntry doc/v8_internals.md
+663 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+664 silly gunzTarPerm extractEntry doc/v8_misc.md
+665 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+666 silly gunzTarPerm extractEntry nan.h
+667 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+668 silly gunzTarPerm extractEntry nan_callbacks.h
+669 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+670 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+671 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+672 silly gunzTarPerm extractEntry nan_converters.h
+673 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+674 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+675 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+676 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+677 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+678 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+679 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+680 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+681 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+682 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+683 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+684 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+685 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+686 silly gunzTarPerm extractEntry nan_new.h
+687 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+688 silly gunzTarPerm extractEntry nan_object_wrap.h
+689 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+690 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+691 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+692 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+693 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+694 silly gunzTarPerm extractEntry nan_string_bytes.h
+695 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+696 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+697 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+698 silly gunzTarPerm extractEntry nan_weak.h
+699 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+700 silly gunzTarPerm extractEntry tools/package.json
+701 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+702 silly gunzTarPerm extractEntry tools/README.md
+703 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+704 silly gunzTarPerm extractEntry tools/1to2.js
+705 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+706 verbose write writing to /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan/package.json
+707 info preinstall nan@2.4.0
+708 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan/package.json
+709 verbose readDependencies loading dependencies from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan/package.json
+710 silly install resolved []
+711 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+712 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+713 info linkStuff nan@2.4.0
+714 silly linkStuff nan@2.4.0 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules as its parent node_modules
+715 verbose linkBins nan@2.4.0
+716 verbose linkMans nan@2.4.0
+717 verbose rebuildBundles nan@2.4.0
+718 info install nan@2.4.0
+719 info postinstall nan@2.4.0
+720 verbose unlock done using /Users/liuxinyu/.npm/_locks/nan-261d306554169ef4.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis/node_modules/nan
+721 verbose about to build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+722 info build /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+723 info linkStuff hiredis@0.5.0
+724 silly linkStuff hiredis@0.5.0 has /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules as its parent node_modules
+725 verbose linkBins hiredis@0.5.0
+726 verbose linkMans hiredis@0.5.0
+727 verbose rebuildBundles hiredis@0.5.0
+728 verbose rebuildBundles [ 'bindings', 'nan' ]
+729 info install hiredis@0.5.0
+730 verbose unsafe-perm in lifecycle true
+731 info hiredis@0.5.0 Failed to exec install script
+732 verbose unlock done using /Users/liuxinyu/.npm/_locks/hiredis-296809a4cc69e292.lock for /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+733 verbose stack Error: hiredis@0.5.0 install: `node-gyp rebuild`
+733 verbose stack Exit status 1
+733 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+733 verbose stack     at emitTwo (events.js:87:13)
+733 verbose stack     at EventEmitter.emit (events.js:172:7)
+733 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+733 verbose stack     at emitTwo (events.js:87:13)
+733 verbose stack     at ChildProcess.emit (events.js:172:7)
+733 verbose stack     at maybeClose (internal/child_process.js:827:16)
+733 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+734 verbose pkgid hiredis@0.5.0
+735 verbose cwd /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+736 error Darwin 15.6.0
+737 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "hiredis" "redis" "--save"
+738 error node v4.4.3
+739 error npm  v2.15.1
+740 error code ELIFECYCLE
+741 error hiredis@0.5.0 install: `node-gyp rebuild`
+741 error Exit status 1
+742 error Failed at the hiredis@0.5.0 install script 'node-gyp rebuild'.
+742 error This is most likely a problem with the hiredis package,
+742 error not with npm itself.
+742 error Tell the author that this fails on your system:
+742 error     node-gyp rebuild
+742 error You can get information on how to open an issue for this project with:
+742 error     npm bugs hiredis
+742 error Or if that isn't available, you can get their info via:
+742 error
+742 error     npm owner ls hiredis
+742 error There is likely additional logging output above.
+743 verbose exit [ 1, true ]
+744 verbose unbuild node_modules/hiredis
+745 info preuninstall hiredis@0.5.0
+746 info uninstall hiredis@0.5.0
+747 verbose unbuild rmStuff hiredis@0.5.0 from /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules
+748 info postuninstall hiredis@0.5.0
+749 silly gentlyRm /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis is being purged from base /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo
+750 verbose gentlyRm don't care about contents; nuking /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+751 silly vacuum-fs purging /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules/hiredis
+752 silly vacuum-fs quitting because other entries in /Users/liuxinyu/GitHub/beifeng/lesson 41 session/demo/node_modules

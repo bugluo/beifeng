@@ -1,8 +1,104 @@
-# session redis
+# session
 
-### 我们为什么要把Session存放到数据中，以及又为什么要在子域名间跨域共享Cookie呢？
+## redis简单手册
 
-## Session与Cookie的关系
+#### 下载安装<a href="http://redis.io/download" target="_blank">redis</a>
+
+##### 基本数据结构及操作 <a href="http://www.yiibai.com/redis/redis_quick_guide.html" target="_blank">redis简明教程</a>
+
+###### Strings - 字符串
+
+Redis的字符串是字节序列。在Redis中字符串是二进制安全的，这意味着他们有一个已知的长度，是没有任何特殊字符终止决定的，所以可以存储任何东西，最大长度可达512兆。
+
+```javascript
+redis 127.0.0.1:6379> SET name "yiibai"
+OK
+redis 127.0.0.1:6379> GET name
+"yiibai"
+```
+
+###### Hashes - 哈希值
+
+Redis的哈希键值对的集合。 Redis的哈希值是字符串字段和字符串值之间的映射，所以它们被用来表示对象
+
+```javascript
+redis 127.0.0.1:6379> HMSET user:1 username yiibai password yiibai points 200
+OK
+redis 127.0.0.1:6379> HGETALL user:1
+
+1) "username"
+2) "yiibai"
+3) "password"
+4) "yiibai"
+5) "points"
+6) "200"
+```
+
+###### Lists - 列表
+
+Redis的列表是简单的字符串列表，排序插入顺序。可以添加元素到Redis列表的头部或尾部。
+
+```javascript
+redis 127.0.0.1:6379> lpush tutoriallist redis
+(integer) 1
+redis 127.0.0.1:6379> lpush tutoriallist mongodb
+(integer) 2
+redis 127.0.0.1:6379> lpush tutoriallist rabitmq
+(integer) 3
+redis 127.0.0.1:6379> lrange tutoriallist 0 10
+
+1) "rabitmq"
+2) "mongodb"
+3) "redis"
+```
+
+###### Sets - 集合
+
+Redis集合是字符串的无序集合。在Redis中可以添加，删除和测试文件是否存在在O(1)的时间复杂度的成员。
+
+```javascript
+redis 127.0.0.1:6379> sadd tutoriallist redis
+(integer) 1
+redis 127.0.0.1:6379> sadd tutoriallist mongodb
+(integer) 1
+redis 127.0.0.1:6379> sadd tutoriallist rabitmq
+(integer) 1
+redis 127.0.0.1:6379> sadd tutoriallist rabitmq
+(integer) 0
+redis 127.0.0.1:6379> smembers tutoriallist
+
+1) "rabitmq"
+2) "mongodb"
+3) "redis"
+```
+
+###### 集合排序
+
+```javascript
+redis 127.0.0.1:6379> zadd tutoriallist 0 redis
+(integer) 1
+redis 127.0.0.1:6379> zadd tutoriallist 0 mongodb
+(integer) 1
+redis 127.0.0.1:6379> zadd tutoriallist 0 rabitmq
+(integer) 1
+redis 127.0.0.1:6379> zadd tutoriallist 0 rabitmq
+(integer) 0
+redis 127.0.0.1:6379> ZRANGEBYSCORE tutoriallist 0 1000
+
+1) "redis"
+2) "mongodb"
+3) "rabitmq"
+```
+
+###### 发布订阅
+
+###### 事务
+
+
+
+## 我们为什么要把Session存放到数据中，以及又为什么要在子域名间跨域共享Cookie呢？
+
+### Session与Cookie的关系
 
 cookie 和session 的区别：
 
