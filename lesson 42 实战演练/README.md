@@ -1,13 +1,17 @@
 # 前期准备
 
-## pm2
+## 了解需求 
 
-## node.js thinkjs
+    企业号应用  sketch
 
-## weui
+## 搭建后台环境
+    
+    pm2 node.js thinkjs <a href="https://github.com/node-webot/wechat-enterprise">企业号sdk</a>
 
-## zepto
+## 搭建前端环境
+    
+    weui weflow zepto
 
-## 前端工作流程 weflow
-
-## 微信企业号
+## 功能测试环境
+    
+    <a href="http://qydev.weixin.qq.com/debug">微信测试后台</a> <a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1455784140&token=&lang=zh_CN">微信开发者工具</a>
