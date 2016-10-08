@@ -1,0 +1,79 @@
+{
+  "TmTPreview": {
+    "host": "10.123.7.56",
+    "port": "8021",
+    "user": "tmt",
+    "pass": "@tmt.io",
+    "remotePath": "tmtdemo.qq.com",
+    "includeHtml": true,
+    "cdnUrl": ""
+  },
+
+  "resftp": {
+     "host": "10.24.255.16",
+     "port": "36000",
+     "user": "mmopencreative",
+     "password": "mmopencreative123",
+     "remotePath": "",  //_events
+     "includeHtml": false,
+     "cdnUrl": "",  //http://res.wx.qq.com/wechatgame/static
+     "reversionUrl": "http://wxres.oa.com/publish"
+   },
+
+   "pureUpload": {
+        "host": "10.24.255.16",
+        "port": "36000",
+        "user": "mmopencreative",
+        "password": "mmopencreative123",
+        "remotePath": "",  //_events
+        "reversionUrl": "http://wxres.oa.com/publishNoRecord"
+   },
+
+  "eosftp": {
+    "host": "10.12.154.188",
+    "port": "8021",
+    "user": "o2ogtimg",
+    "pass": "o2ogtimg",
+    "remotePath": "/",
+    "includeHtml": false
+  },
+
+  "migcdn": {
+    "upload_url": "http://inner.up.cdn.qq.com:8080/uploadserver/uploadfile.jsp",
+    "appname": "tmt",
+    "user": "zedhuang",
+    "key": "511F636AA290F82623E4E9ED9BAD6DFB",
+    "isunzip": 1,
+    "remotePath": "",
+    "includeHtml": false,
+    "cdnUrl": "",
+    "reversionUrl": "http://wxres.oa.com/api/version"
+  },
+
+  "livereload": {
+     "available": true,  //开启自动刷新
+     "port": 8080,
+     "startPath": "html/TmTIndex.html"
+   },
+
+
+   "reversion": {
+      "available": true,  //开启reversion
+      "tag": ""
+  },
+
+   //路径相对于 tasks/plugins 目录
+  "plugins": {
+    "BuildDevAfter": ["TmTIndex"],
+    "BuildDistAfter": [],
+    "CdnBetaAfter": [],
+    "CdnDistAfter": [],
+    "TmTPreviewAfter": ["TmTPreview"]
+  },
+
+  "supportWebp": false,
+
+  "lazyDir": ["../slice"],
+
+  "supportREM": false
+}

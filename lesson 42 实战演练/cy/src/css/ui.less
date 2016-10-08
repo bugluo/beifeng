@@ -1,0 +1,413 @@
+// 布局方位
+// --------------------------
+.tmt-ui-ta-c {
+    text-align: center;
+}
+
+.tmt-ui-ta-l {
+    text-align: left;
+}
+
+.tmt-ui-ta-r {
+    text-align: right;
+}
+
+.tmt-ui-va-b {
+    vertical-align: bottom;
+}
+
+.tmt-ui-va-bl {
+    vertical-align: baseline;
+}
+
+.tmt-ui-va-m {
+    vertical-align: middle;
+}
+
+.tmt-ui-va-t {
+    vertical-align: top;
+}
+
+.tmt-ui-pos-a {
+    position: absolute;
+}
+
+.tmt-ui-pos-f {
+    position: fixed;
+}
+
+.tmt-ui-pos-r {
+    position: relative;
+}
+
+.tmt-ui-pos-s {
+    position: static;
+}
+
+.tmt-ui-ov-a {
+    overflow: auto;
+}
+
+.tmt-ui-ov-h {
+    overflow: hidden;
+}
+
+.tmt-ui-ov-s {
+    overflow: scroll;
+}
+
+.tmt-ui-ov-v {
+    overflow: visible;
+}
+
+.tmt-ui-fl-l {
+    float: left;
+}
+
+.tmt-ui-fl-n {
+    float: none;
+}
+
+.tmt-ui-fl-r {
+    float: right;
+}
+
+.tmt-ui-d-b {
+    display: block;
+}
+
+.tmt-ui-d-i {
+    display: inline;
+}
+
+.tmt-ui-d-ib {
+    display: inline-block;
+}
+
+.tmt-ui-d-n {
+    display: none;
+}
+
+// 文字溢出
+// --------------------------
+.tmt-ui-tof {
+    .text-overflow()
+}
+
+// clearfix
+// --------------------------
+.tmt-ui-clearfix {
+    .clearfix();
+}
+
+// zoom
+// --------------------------
+.tmt-ui-zoom {
+    zoom: 1;
+}
+
+.tmt-ui-1px-border {
+    position: relative;
+    height: 1px;
+    &:after {
+        border-bottom: 1px solid #DFDFDD;
+        content: ' ';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+}
+
+.tmt-ui-flex {
+    display: -webkit-box;
+}
+
+.tmt-ui-flex__item {
+    -webkit-box-flex: 1;
+    display: block !important; /*must be block*/
+    width: 0;
+}
+
+.tmt-ui-layout-main {
+    padding: 15px 15px 10px 15px;
+    background-color: white;
+}
+
+.tmt-ui-layout-card {
+    padding: 20px 18px 0;
+}
+
+.tmt-ui-mt_xxl {
+    margin-top: 30px;
+}
+
+.tmt-ui-mr_xxl {
+    margin-right: 30px;
+}
+
+.tmt-ui-mb_xxl {
+    margin-bottom: 30px;
+}
+
+.tmt-ui-ml_xxl {
+    margin-left: 30px;
+}
+
+.tmt-ui-mt_xl {
+    margin-top: 20px;
+}
+
+.tmt-ui-mt_l {
+    margin-top: 15px;
+}
+
+.tmt-ui-mr_l {
+    margin-right: 15px;
+}
+
+.tmt-ui-mb_l {
+    margin-bottom: 15px;
+}
+
+.tmt-ui-ml_l {
+    margin-left: 15px;
+}
+
+.tmt-ui-mt_m {
+    margin-top: 10px;
+}
+
+.tmt-ui-mr_m {
+    margin-right: 10px;
+}
+
+.tmt-ui-mb_m {
+    margin-bottom: 10px;
+}
+
+.tmt-ui-ml_m {
+    margin-left: 5px;
+}
+
+.tmt-ui-mt_s {
+    margin-top: 5px;
+}
+
+.tmt-ui-mr_s {
+    margin-right: 5px;
+}
+
+.tmt-ui-mb_s {
+    margin-bottom: 5px;
+}
+
+.tmt-ui-ml_s {
+    margin-left: 5px;
+}
+
+.tmt-ui-pl_l {
+    padding-left: 15px;
+}
+
+.tmt-ui-pr_l {
+    padding-right: 15px;
+}
+
+.tmt-ui-pl_xl {
+    padding-left: 20px;
+}
+
+.tmt-ui-pr_xl {
+    padding-right: 20px;
+}
+
+.tmt-ui-pt_m {
+    padding-top: 10px;
+}
+
+.tmt-ui-pt_l {
+    padding-top: 15px;
+}
+
+.tmt-ui-pt_xl {
+    padding-top: 20px;
+}
+
+.tmt-ui-pb_l {
+    padding-bottom: 15px;
+}
+
+.tmt-ui-p_m {
+    padding: 10px;
+}
+
+.tmt-ui-pl_m {
+    padding-left: 10px;
+}
+
+.tmt-ui-pr_m {
+    padding-right: 10px;
+}
+
+.tmt-ui-p_l {
+    padding: 15px;
+}
+
+.tmt-ui-touch-active {
+    background-color: #e4e4e4 !important;
+}
+
+.tmt-ui-bb_1px {
+    position: relative;
+    &:after {
+        border-bottom: 1px solid #DDDDDD;
+        content: ' ';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        -webkit-transform-origin: left bottom;
+    }
+}
+
+.tmt-ui-bt_1px {
+    position: relative;
+    &:before {
+        border-top: 1px solid #DDDDDD;
+        content: ' ';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transform-origin: left top;
+    }
+}
+
+.tmt-ui-bl_1px {
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid #DDDDDD;
+        color: #DDDDDD;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleX(.5);
+        transform: scaleX(.5);
+    }
+}
+
+.tmt-ui-br_1px {
+    position: relative;
+    &:after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        border-right: 1px solid #DDDDDD;
+        color: #DDDDDD;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scaleX(.5);
+        transform: scaleX(.5);
+    }
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+    .tmt-ui-bb_1px, .tmt-ui-bt_1px {
+        &:after, &:before {
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+    }
+    .tmt-ui-bl_1px, .tmt-ui-br_1px {
+        &:after, &:before {
+            -webkit-transform: scaleX(.5);
+            transform: scaleX(.5);
+        }
+    }
+}
+
+
+.ui-bfc{
+  .clearfix();
+}
+.ui-bfc__left{
+    float:left
+}
+.ui-bfc__right{
+    float: right;
+}
+.ui-bfc__content{
+    display:table-cell;
+    &:after{
+        clear:both;
+        display:block;
+        visibility:hidden;
+        overflow:hidden;
+        height:0 !important;
+        line-height:0;
+        font-size:xx-large;
+        content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
+    }
+}
+
+.red{
+    color:#e8262a;
+}
+
+.gray{
+    color:#b5b5b5;
+}
+.black{
+    color:#888;
+}
+
+.ui-flex {
+    display: flex;
+}
+
+.ui-flex__item {
+    flex: 1;
+    display: block !important; /*must be block*/
+    width: 0;
+}
+
+.ui-has-footer {
+    height: auto;
+    overflow: auto;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box
+}
+
+.ui-has-footer_size-1 {
+    padding-bottom: 70px;
+}
+
+.ui-has-footer_size-2 {
+    padding-bottom: 54px;
+}
+
+.ui-bg-white {
+    background-color: #fff!important;
+}
+
+.ui-border-gray {
+    border: 1px solid #F3F3F5;
+}
+
+@import "pcy";
